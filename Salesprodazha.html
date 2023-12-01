@@ -25,6 +25,7 @@ flex-shrink: 0;
 .Logotype{
 display: grid;
 grid-template-columns: 5% 90%;
+
 }
 
 .MenuItems{
@@ -39,10 +40,35 @@ line-height: normal;
 margin-top: 37px;
 margin-bottom: 30px;
 margin-right: 19px;
+width: 614px;
+height: 49px;
+flex-shrink: 0;
 }
 
 .Item{
   display: block;
+}
+
+.PropertyType{
+  background-color: rgba(24, 43, 90, 1);
+  width: 1920px; height: 780px;
+  display: inline-block;
+  
+}
+
+.Figure1{
+  transform: skewX(-20deg) skewY(0deg);
+  width: 950px; height: 780px;
+  background: aquamarine;
+  display: block;
+  float: left;
+}
+.Figure2{
+  transform: skewX(-20deg) skewY(0deg);
+  width: 950px; height: 780px;
+  background: rebeccapurple;
+  display: block;
+  float: right;
 }
 
 
@@ -56,7 +82,7 @@ margin-right: 19px;
   <div class="MainGrid">
   
       <header class="Menu" style="color: rgba(24, 43, 90, 1);">
-        <div class="Logotype">
+        <div class="Logotype" style="margin-left: 50px; margin-top: 10px;">
             <img src="Images/Logo 2.png">
             <h1>Salesprodazha.ru</h1>
         </div>
@@ -71,19 +97,25 @@ margin-right: 19px;
     </header>
 
     <div class="ViewBoard" style="color: rgba(24, 43, 90, 1);">
-        <h2>Услуги аренды и продажи недвижимости
+      <div style="position: absolute;">
+         <h2>Услуги аренды и продажи недвижимости
           <br>в г. [Город]</h2>
           <a style="border: 3px solid black; text-decoration: none;
            color: rgba(24, 43, 90, 1); padding: 10px;"
            href="">ЗАКАЗАТЬ УСЛУГИ</a>
-           <img src="Images/Prewiev.jpg" style="width: 1920px; height: 780px;
-            -moz-transform: scaleX(-1);
-        -o-transform: scaleX(-1);
-        -webkit-transform: scaleX(-1);
-        transform: scaleX(-1);">
+      </div>
+       
+           <img src="Images/Prewiev.jpg" style="width: 1920px; height: 780px;transform: scaleX(-1);">
     </div>
 
     <div class="PropertyType">
+      <div class="Figure1">
+
+      </div>
+
+      <div class="Figure2">
+
+      </div>
 
     </div>
 
