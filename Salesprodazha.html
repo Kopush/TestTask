@@ -3,7 +3,10 @@
   <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300&family=Open+Sans:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300&family=Noto+Sans&family=Open+Sans:wght@300&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300&family=Noto+Sans&family=Open+Sans:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
     <meta charset="utf-8">
     <title>"Salesprodazha.ru</title>
 
@@ -55,20 +58,30 @@ flex-shrink: 0;
   display: inline-block;
   
 }
+.BeforeFigure{
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 100px 100px;
+  border-color: transparent aquamarine transparent transparent;
+}
 
 .Figure1{
-  transform: skewX(-20deg) skewY(0deg);
+  transform: skewX(-20deg);
+  border-right: 20px solid aquamarine;
+  border-left: 0deg solid transparent;
   width: 950px; height: 780px;
   background: aquamarine;
   display: block;
   float: left;
 }
-.Figure2{
-  transform: skewX(-20deg) skewY(0deg);
-  width: 950px; height: 780px;
-  background: rebeccapurple;
-  display: block;
-  float: right;
+.AboutUs{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
@@ -76,7 +89,7 @@ flex-shrink: 0;
 
   </head>
 
-
+<container>
 <body>
 
   <div class="MainGrid">
@@ -109,18 +122,73 @@ flex-shrink: 0;
     </div>
 
     <div class="PropertyType">
-      <div class="Figure1">
+      
+      <div class="AfterFigure">
 
       </div>
 
+      <div class="BeforeFigure">
+
+      </div>
+      
+      
+
+      <div class="Figure1">
+
+      </div>
+      
       <div class="Figure2">
 
       </div>
 
+      
+
     </div>
 
-    <div class="AboutUs">
+    <div class="AboutUs" style="width: 1920px; height: 780px; background-color: white;">
+      
+     
 
+        <div style="margin-left: 150px; margin-right: auto; margin-top: 125px; margin-bottom: 40px; float: left;">
+
+        <div style="width: 763px;height: 510px; background-color: rgba(24, 43, 90, 1); position: absolute;">
+        <img src="Images/WavesVector.png" style="width: 763px;height: 510px;">
+      </div>
+
+      <div style="position: absolute; margin: 25px;">
+        <img src="Images/Home3.jpg" style="width: 763px;height: 510px;">
+      </div>
+
+      </div>
+      
+
+      <div style="margin-left: 50px; margin-top: 125px; margin-bottom: 40px; float: right; width: 804px;">
+        <h2 style="font-family: Noto Sans; color: rgba(24, 43, 90, 1);">О нас</h2>
+        <p style="font-family: Roboto;color: #000;
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;">Lorem ipsum – псевдо-латинский текст, который используется для веб дизайна, типографии,
+         <br>оборудования, и распечатки вместо английского текста для того, чтобы сделать ударение не на
+         <br>содержание, а на элементы дизайна. Такой текст также называется как заполнитель.
+         <br>
+         <br>Это очень удобный инструмент для моделей (макетов). Он помогает выделить визуальные элементы в
+         <br>документе или презентации, например текст, шрифт или разметка. Lorem ipsum по большей части
+         <br>является элементом латинского текста классического автора и философа Цицерона. Слова и буквы
+         <br>были заменены добавлением или сокращением элементов, поэтому будет совсем неразумно пытаться
+          vпередать содержание; это не гениально, не правильно, используется даже не понятный латинский.</p>
+          <div style="width: 165px; height: 50px;">
+            <a style="padding: 14px;border: 3px solid rgba(24, 43, 90, 1);; text-decoration: none;
+          color: rgba(24, 43, 90, 1); padding: 10px; font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal; font-family: Roboto;" href="">ПОДРОБНЕЕ</a>
+          </div>
+          
+        </div>
+        
+      
     </div>
 
     <div class="Communication">
@@ -137,3 +205,4 @@ flex-shrink: 0;
 
 </div>
   </body>
+</container>
