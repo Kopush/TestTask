@@ -7,3 +7,114 @@
     font-weight: 400;
     font-style: normal;
   }
+  *{
+    margin: 0px;
+    
+  }
+ .MainGrid{
+display: grid;
+padding: 0;
+margin: 0;
+}
+
+.Menu{
+display: grid;
+grid-template-columns: 60% 40%;
+width: 1920px;
+height: 86px;
+flex-shrink: 0;
+}
+
+.Logotype{
+display: grid;
+grid-template-columns: 5% 90%;
+
+}
+
+.MenuItems{
+display: grid;
+grid-template-columns: 20% 20% 20% 20% 20%;
+color: #000;
+font-family: Roboto;
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+margin-top: 37px;
+margin-bottom: 30px;
+margin-right: 19px;
+width: 614px;
+height: 49px;
+flex-shrink: 0;
+}
+
+.Item{
+  display: block;
+}
+
+.PropertyType{
+  background-color: rgba(24, 43, 90, 1);
+  width: 1920px; height: 780px;
+  display: inline-block;
+  margin: 0%;
+  
+}
+
+.BeforeFigure{
+  width: 300px;
+  height: 780px;
+  background: aquamarine;
+  display: block;
+  float: left;
+  position: relative;
+}
+
+.Figure1{
+  transform: skew(-20deg);
+  width: 950px; height: 780px;
+  background: aquamarine;
+  position: absolute;
+  display: block;
+  float: left;
+  margin-left: 0px;
+}
+.AboutUs{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ViewBoard{
+  height: 866px;
+  margin: 0%;
+}
+.Nameless{
+  font-family: Leto Sans;
+}
+.Commercial{
+  fill: url(Images/WavesVector.png);
+}
+.Communication{
+  width: 1920px;
+  height: 498px;
+  background-color: rgba(24, 43, 90, 1);
+}
+.CommunicationTextDecorations{
+color: #182B5A;
+font-family: Roboto;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+::-webkit-input-placeholder {
+    color: #182B5A;
+}
+}
+.RobotoFont{
+    color: #FEFEFE;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
