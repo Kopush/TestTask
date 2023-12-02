@@ -118,3 +118,10 @@ line-height: normal;
     font-weight: 400;
     line-height: normal;
 }
+.Adress{
+    width: 1920px;
+    height: 396px;
+    background-color: #FEFEFE;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
