@@ -133,3 +133,10 @@ line-height: normal;
     display: grid;
     grid-template-columns: 45% 55%;
 }
+.Contacts{
+    display: block;
+    background-color: rgba(24, 43, 90, 1);
+    width: 1920px;
+    height: 273px;
+    position: relative;
+}
