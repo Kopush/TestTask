@@ -140,3 +140,12 @@ line-height: normal;
     height: 273px;
     position: relative;
 }
+.ContactText{
+      display: flex; 
+      flex-direction: column;
+      width: 804px;
+      height: 154px; 
+      margin-left: 100px;
+      margin-top: 60px; margin-bottom: 59px; 
+      position: absolute;
+}
