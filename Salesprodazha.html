@@ -68,49 +68,54 @@
     <div class="PropertyType"><!-- Интерактивный баннер "Виды недвижимости" --> 
       
       <div style="display: grid; grid-template-columns: 50% 50%;">
-        <canvas id="graph" width="1057" height="739"> </canvas>
-        <img src="Images/WavesVector.png" alt="">
+        <canvas id="graph" width="1057" height="739" style="overflow: hidden;"></canvas>
             <script>
+              
                var canvas = document.getElementById('graph');
                var ctx = canvas.getContext('2d');
+               
+                ctx.beginPath();
+                ctx.moveTo(0, 0);
+                ctx.lineTo(1052, 0);
+                ctx.lineTo(902, 739);
+                ctx.lineTo(0,739);
+                ctx.closePath();
+                ctx.stroke();
 
-               let base_image = new Image();
-               base_image.src = './WavesVector.png';
-               base_image.onload = function() 
-               {
-                  context.drawImage(base_image, 1057, 739);
-               };
-                //ctx.beginPath();
-                //ctx.moveTo(0, 0);
-                //ctx.lineTo(1052, 0); // линия вправо
-                //ctx.lineTo(902, 739); // линия вниз
-                //ctx.lineTo(0,739); // линия влево
-                //ctx.closePath(); // смыкание начала и конца рисунка (левая стена)
-                //ctx.fillStyle = 'yellow'; // тёмно-синий цвет
-                //ctx.fill();
-                //ctx.stroke();
-                //var blueprint_background = new Image();
-                  //blueprint_background.src = 'Images/WavesVector.png'; 
-                  //blueprint_background.onload = function()
-                  //{
-                   //var pattern = context.createPattern(this, "repeat");
-                    //context.fillStyle = pattern;
-                    //context.fill();
-                 //}
-                  
+                var cx = document.querySelector("canvas").getContext("2d");
+                var img = document.createElement("img");
+                img.src = "Images/WavesVector.png";
+                img.addEventListener("load", function() 
+                {
+                  for (var x = 0; x <= 1057; x += 30)
+                    cx.drawImage(img, 0, 300);
+                });
             </script>
-    
+
+
+        <canvas id="flats" width="1222px" height="659px"></canvas>
+          <script>
+          var canvas = document.getElementById('flats');
+               var ctx = canvas.getContext('2d');
+                ctx.beginPath();
+                ctx.moveTo(0, 0);
+                ctx.lineTo(1052, 0);
+                ctx.lineTo(902, 659);
+                ctx.lineTo(0,659);
+                ctx.closePath();
+                ctx.stroke();
+
+                var cx = document.querySelector("canvas").getContext("2d");
+                var img = document.createElement("img");
+                img.src = "Images/Home1.jpg";
+                img.addEventListener("load", function() 
+                {
+                  let scale_factor = Math.min(canvas.width/img.width, canvas.height/img.height);
+                  for (var x = 0; x <= 1057; x += 30)
+                    cx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                });
+        </script>
         
-
-
-        <!--<svg  class="Commercial" style="margin-left: 0px;" width="960px" height="780" viewBox="0 0 960 780" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0,0 L960,0 M960,0 L850,780 M850,780 L0,780 Z0,0" stroke="black" id="MyRect"/>
-        </svg>
-
-        <svg style="margin-right: 0px;" width="960px" height="780" viewBox="0 0 960 780" xmlns="http://www.w3.org/2000/svg">
-          <path d="M960,0 L1920,0 M1920,0 L1920,780 M1920,780 L960,780 Z960,0" stroke="black"/>
-        </svg> --> 
-
       </div>
       
       
