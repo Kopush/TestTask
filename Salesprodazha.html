@@ -22,9 +22,9 @@
   <div class="MainGrid">
   
       <header class="Menu" style="color: rgba(24, 43, 90, 1);">
-        <div class="Logotype" style="margin-left: 100px; margin-top: 20px;">
+        <div class="Logotype" style="margin-left: 100px; margin-top: 18px;">
             <img src="Images/Logo 2.png">
-            <h1 class="Nameless">Salesprodazha.ru</h1>
+            <h1 style="font-family: Leto Sans; font-weight: 400; font-size: 22px; margin-top: 18px;">Salesprodazha.ru</h1>
         </div>
             <div class="MenuItems">
                 <a class="Item">АРЕНДА</a>
@@ -56,8 +56,9 @@
           <div style="border: 3px solid black; width: 230px;
           height: 50px;margin-top: 20px;">
             <a style=" text-decoration: none;
-           color: rgba(24, 43, 90, 1);  font-family: Leto Sans; font-size: 16px;"
-           href="">ЗАКАЗАТЬ УСЛУГИ</a>
+            color: rgba(24, 43, 90, 1);  
+            font-family: Leto Sans; font-size: 16px; text-align: center;"
+            href="">ЗАКАЗАТЬ УСЛУГИ</a>
           </div>
           
       </div>
@@ -66,10 +67,50 @@
 
     <div class="PropertyType"><!-- Интерактивный баннер "Виды недвижимости" --> 
       
-      <div >
-        <svg class="Commercial" style="margin-left: 0px;" width="960px" height="780" viewBox="0 0 960 780" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0,0 L960,0 M960,0 L850,780 M850,780 L0,780 Z0,0" stroke="black" fill="yellow"/>
-          </svg>
+      <div style="display: grid; grid-template-columns: 50% 50%;">
+        <canvas id="graph" width="1057" height="739"> </canvas>
+        <img src="Images/WavesVector.png" alt="">
+            <script>
+               var canvas = document.getElementById('graph');
+               var ctx = canvas.getContext('2d');
+
+               let base_image = new Image();
+               base_image.src = './WavesVector.png';
+               base_image.onload = function() 
+               {
+                  context.drawImage(base_image, 1057, 739);
+               };
+                //ctx.beginPath();
+                //ctx.moveTo(0, 0);
+                //ctx.lineTo(1052, 0); // линия вправо
+                //ctx.lineTo(902, 739); // линия вниз
+                //ctx.lineTo(0,739); // линия влево
+                //ctx.closePath(); // смыкание начала и конца рисунка (левая стена)
+                //ctx.fillStyle = 'yellow'; // тёмно-синий цвет
+                //ctx.fill();
+                //ctx.stroke();
+                //var blueprint_background = new Image();
+                  //blueprint_background.src = 'Images/WavesVector.png'; 
+                  //blueprint_background.onload = function()
+                  //{
+                   //var pattern = context.createPattern(this, "repeat");
+                    //context.fillStyle = pattern;
+                    //context.fill();
+                 //}
+                  
+            </script>
+    
+        
+
+
+        <!--<svg  class="Commercial" style="margin-left: 0px;" width="960px" height="780" viewBox="0 0 960 780" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0,0 L960,0 M960,0 L850,780 M850,780 L0,780 Z0,0" stroke="black" id="MyRect"/>
+        </svg>
+
+        <svg style="margin-right: 0px;" width="960px" height="780" viewBox="0 0 960 780" xmlns="http://www.w3.org/2000/svg">
+          <path d="M960,0 L1920,0 M1920,0 L1920,780 M1920,780 L960,780 Z960,0" stroke="black"/>
+        </svg> --> 
+
       </div>
       
       

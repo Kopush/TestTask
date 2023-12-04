@@ -42,7 +42,7 @@ font-weight: 700;
 line-height: normal;
 margin-top: 37px;
 margin-bottom: 30px;
-margin-right: 19px;
+margin-right: 109px;
 width: 614px;
 height: 49px;
 flex-shrink: 0;
@@ -54,7 +54,7 @@ flex-shrink: 0;
 
 .PropertyType{
   background-color: rgba(24, 43, 90, 1);
-  width: 1920px; height: 780px;
+  width: 1920px; height: 739px;
   display: inline-block;
   margin: 0%;
   
@@ -148,4 +148,7 @@ line-height: normal;
       margin-left: 100px;
       margin-top: 60px; margin-bottom: 59px; 
       position: absolute;
+}
+#MyRect{
+  fill: black;
 }
