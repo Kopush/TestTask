@@ -11,6 +11,9 @@
     margin: 0px;
     
   }
+  ::-webkit-scrollbar {
+    display: none;
+}
  .MainGrid{
 display: grid;
 padding: 0;
@@ -49,15 +52,17 @@ flex-shrink: 0;
 }
 
 .Item{
-  display: block;
+  display: inline-block;
+  text-align: center;
 }
 
 .PropertyType{
   background-color: rgba(24, 43, 90, 1);
   width: 1920px; height: 739px;
-  display: inline-block;
+  display: grid;
+  grid-template-columns: 50% 50%;
   margin: 0%;
-  
+  overflow: hidden;
 }
 
 .BeforeFigure{
@@ -92,7 +97,7 @@ flex-shrink: 0;
   font-family: Leto Sans;
 }
 .Commercial{
-  fill: url(Images/WavesVector.png);
+  width: 1157px;
 }
 .Communication{
   width: 1920px;
@@ -151,4 +156,8 @@ line-height: normal;
 }
 #MyRect{
   fill: black;
+}
+.rsImg{
+              transform: skewX(15deg);
+
 }

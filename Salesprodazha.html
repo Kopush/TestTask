@@ -28,10 +28,10 @@
         </div>
             <div class="MenuItems">
                 <a class="Item">АРЕНДА</a>
-                <a>ПРОДАЖА</a>
-                <a>ПОКУПКА</a>
-                <a>О КОМПАНИИ</a>
-                <a>КОНТАКТЫ</a>
+                <a class="Item">ПРОДАЖА</a>
+                <a class="Item">ПОКУПКА</a>
+                <a class="Item">О КОМПАНИИ</a>
+                <a class="Item">КОНТАКТЫ</a>
                   
             </div>
     </header>
@@ -67,8 +67,62 @@
 
     <div class="PropertyType"><!-- Интерактивный баннер "Виды недвижимости" --> 
       
-      <div style="display: grid; grid-template-columns: 50% 50%;">
-        <canvas id="graph" width="1057" height="739" style="overflow: hidden;"></canvas>
+      <!-- Коммерческая недвижимость" --> 
+      <div class="Commercial" 
+           style="margin-left: -200px;
+                  transform: skewX(-15deg);
+                  background-image: url(Images/WavesVector.png);
+                  width: 1157px; height: 739px;
+                  overflow: hidden;
+                  background-size: cover;">
+       <img height="639px" src="https://s3-alpha-sig.figma.com/img/fd1a/5e61/ec1a0e22f16ec8ce7d168bd648b3a60c?Expires=1702857600&Signature=Y872~xWmYKupbQbD4PvZT-SD9rDKsvSFOECAI8kFcStNq8hEh~NwSZD1iTOFYv05DlDuLXndH8tu~rPduqCcXpMUVoPED4TeuyaMLdrd1PNq1Sa9KpkxCbfl0FCKhtv3OM9WIcp0zgWekIFnCstRCevwrluKOzPjDI12tP8k-NI4l1mPAnYKsSDNeiD06zXwATydQwB8zNH9cnGzzYMtapG6jRmE-lztf8qfF~mwRWBRXLuxXRmt-dUvrZnEcXj4jSbgEHAGr5wbyS9bA2AwDPgkkkXWjb2E-FZBpJyr0Uy03aSIGDnzNK4GMq0QV6Soih51PRzmGNynSff8y5VMhw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+       style="height: 85%; width: 100%;
+              transform: skewX(15deg);
+              margin-left: 180px;
+              background-size: cover;">
+              <h1 style="text-align: center; 
+              font-family: Noto Sans;
+              color: #FEFEFE;
+              font-style: normal;
+              text-decoration: none;
+              height: 28px;
+              margin-left: auto; margin-right: auto;">Коммерческая недвижимость</h1>
+      </div>
+
+      <!-- Жилая недвижимость" --> 
+      <div class="Residential"
+        style="margin-left: 8px;
+                  transform: skewX(-15deg);
+                  background-image: url(Images/WavesVector.png);
+                  width: 1157px; height: 739px;
+                  overflow: hidden;
+                  background-size: cover;">
+
+                  <h1 style="text-align: center; 
+                  font-family: Noto Sans;
+                  color: #FEFEFE;
+                  font-style: normal;
+                  text-decoration: none;
+                  height: 28px;
+                  margin-left: auto; margin-right: auto;">Жилая недвижимость</h1>
+
+       <img class="rsImg" 
+       src="https://s3-alpha-sig.figma.com/img/531c/0602/8a9a67aa135a183e3c55eb73e2914d17?Expires=1702857600&Signature=HrhZ4CtcfLvzidnmT0-yLJX7vxyQzfBdBKrR3meg5qAvenr6xSHrKwmy4uGbZ9qiqujsp45qt9uUZ~KrqO4vjQY1lgbQldtrcGsvMRLmSAxPi~LAkwzBpr0Ye6xqI4JtFIfETrSiz8u1XTqYj6s3hjge4Eihg8ijKeISlNM0rswAdf6Mp1SSHZuNqvEOI31s1N1WsSBn6FUWB08lW3wsa~myB3J~r~rZ11eualzFrOFokQaNzr-i~Pa-MGnYflm5ICsygdoOd5KfSJv5YJe8LKa3TJeJ4KJ0k9Yg1hCu1CWlJCBnh2AiIzFowxAxTqcRPh63Z3mNjswSoMgYM-aACw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+       style="width: 100%; height: 639px;
+       object-fit: fill;
+       margin-top: 86px;
+       margin-left: -100px;">
+      </div>
+
+
+      
+      <!--<div style="display: grid; grid-template-columns: 50% 50%;">
+        <canvas id="graph" width="1057" height="739" style="overflow: hidden;" ClipToBounds="True">
+          <Canvas.Background>
+            <ImageBrush />
+            </Canvas.Background>
+            <Image Name="Images/WavesVector.png"  />
+        </canvas>
             <script>
               
                var canvas = document.getElementById('graph');
@@ -90,10 +144,10 @@
                   for (var x = 0; x <= 1057; x += 30)
                     cx.drawImage(img, 0, 300);
                 });
-            </script>
+            </script> --> 
 
 
-        <canvas id="flats" width="1222px" height="659px"></canvas>
+        <!--<canvas id="flats" width="1222px" height="659px"></canvas>
           <script>
           var canvas = document.getElementById('flats');
                var ctx = canvas.getContext('2d');
@@ -114,8 +168,8 @@
                   for (var x = 0; x <= 1057; x += 30)
                     cx.drawImage(img, 0, 0, canvas.width, canvas.height);
                 });
-        </script>
-        
+        </script>--> 
+
       </div>
       
       
