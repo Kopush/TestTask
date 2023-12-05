@@ -19,7 +19,7 @@
 
   *{
     margin: 0px;
-    
+    list-style-type: none
   }
   ::-webkit-scrollbar {
     display: none;
@@ -63,24 +63,16 @@ margin-right: 109px;
 width: 614px;
 height: 86px;
 flex-shrink: 0;
-text-decoration: none;
 text-align: center;
 display: flex;
 align-items: center;
 justify-content: space-around;
 }
-*,
-*:before,
-*:after{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
 
 .MenuItems a{
-text-decoration:none; 
+text-decoration: none;
 display: inline-block;
-line-height: 1; 
+line-height: 4px; 
 color: black;
 font-size: 16;
 font-family: Roboto;
@@ -88,22 +80,42 @@ font-weight: 700;
 word-wrap: break-word;
 }
 
-.MenuItems a:after {
-  display: block; /*превращаем его в блочный элемент*/
-  content: ""; /*контента в данном блоке не будет поэтому в кавычках ничего не ставим*/
-  height: 3px; /*задаём высоту линии*/
-  width: 0%; /*задаём начальную ширину элемента (линии)*/
-  background-color: #225384; /*цвет фона элемента*/
-  transition: width 0.4s ease-in-out; /*данное свойство отвечает за плавное изменение ширины. Здесь можно задать время анимации в секундах (в данном случае задано 0.4 секунды)*/
+
+li > a {
+  position: relative;
+  color: black;
+  text-decoration: none;
+  padding-top: 45px;
+  padding-bottom: 35px;
 }
 
-.MenuItems a:hover:after,
-.MenuItems a:focus:after {
-    width: 100%;
-    text-underline-offset: 10px;
-    text-decoration: underline;
+li > a:hover {
+  color: black;
+  text-decoration: none;
 }
 
+li > a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+     -webkit-transition: all 0.3s ease-in-out 0s;
+     transition: all 0.3s ease-in-out 0s;
+     text-decoration: none;
+}
+
+li > a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  text-decoration: none;
+}
 
 .PropertyType{
   background-color: rgba(24, 43, 90, 1);
@@ -155,14 +167,15 @@ word-wrap: break-word;
 .ServicesButton{
   border: 3px solid black; width: 230px;
   height: 50px;margin-top: 20px;
-  padding-top: 10px;
 }
 
 .ServLink{
   text-decoration: none;
   color: rgba(24, 43, 90, 1);  
   font-family: Leto Sans; font-size: 16px; text-align: center;
-  margin-left: 25px;
+  margin-top: 60px;
+  margin-bottom: -30px;
+  margin-left: 30px;
 }
 
 .Nameless{
@@ -189,7 +202,7 @@ word-wrap: break-word;
 }
 
 .CommercialText{
-  font-style: normal !important;
+  font-style: normal;
   color: #FEFEFE; font-family: Noto Sans;
   transform: skewX(15deg);
   margin-left: 45%;
@@ -198,7 +211,9 @@ word-wrap: break-word;
   height: 33px;
 }
 
+
 .Residential{
+  position: relative;
   margin-left: 8px;
   transform: skewX(-15deg);
   background-image: url(Images/WavesVector.png);
@@ -208,6 +223,7 @@ word-wrap: break-word;
 }
 
 .ResidentialText{
+  position: relative;
   font-style: normal !important;
   color: #FEFEFE; font-family: Noto Sans;
   transform: skewX(15deg);
@@ -217,6 +233,7 @@ word-wrap: break-word;
 }
 
 .ResidentialBanner{
+  position: relative;
   transform: skewX(15deg);
   width: 100%; height: 639px;
   object-fit: fill;
@@ -231,11 +248,13 @@ word-wrap: break-word;
 }
 
 .ImagesPart{
-  margin-left: 150px; 
+  width: auto;
+  height: auto;
+  margin-left: 12%; 
   margin-right: auto; 
-  margin-top: 125px; 
-  margin-bottom: 40px; 
+  margin-top: 100px; 
   float: left;
+  margin-right: 20%;
 }
 
 .WavesBackShell{
@@ -258,7 +277,7 @@ word-wrap: break-word;
 }
 
 .TextPart{
-  margin-left: auto; 
+  margin-left: 6px; 
   margin-top: auto; 
   margin-bottom: auto; 
   margin-right: auto; 
@@ -266,53 +285,206 @@ word-wrap: break-word;
 }
 
 .TPh2{
-  font-family: Muller; 
-  color: rgba(24, 43, 90, 1);
+  color: #182B5A;
+  font-family: Noto Sans;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 
 .TPtext{
+  margin-top: 35px;
   width: 804px;
-  height: 329px;
+  height: 251px;
   font-family: Roboto;
   color: #000;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
-  background-color: rgba(24, 43, 90, 1);
+  line-height: 30px;
 }
 
-.overlay1{
+.CommercialTextOverlay{
+  font-style: normal;
+  color: #FEFEFE; font-family: Noto Sans;
+  transform: skewX(15deg);
+  margin-left: 35%;
+  margin-top: 25%;
+  height: 33px;
+
+  font-size: 35px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.OverlayText{
   position: absolute;
-  width: 100%;
-  height: 0;
+  width: 0;
+  height: 100%;
   left: 0;
   right: 0;
   bottom: 0;
   overflow: hidden;
-  transition: 0.3s;
-  background-image: url(Images/Home1.jpg);
-  opacity: 50%;
+  transition: 0.5s;
+  font-family: Noto Sans;
 }
 
-.Commercial:hover .overlay1{
+.CommercialInfo{
+  width: 320px;
+  height: 55px;
+  border: 3px solid #FEFEFE;
+  background: none;
+  transform: skewX(15deg);
+  color: #FEFEFE;
+
+  font-family: Noto Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: 45%;
+  margin-top: 5%;
+}
+
+.overlay{
+  position: absolute;
+  width: 0;
   height: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  background-color: rgba(24, 43, 90, 1);
+  margin-left: 0;
+}
+.overlay1{
+  position: absolute;
+  width: 0;
+  height: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  background-image: url(Images/Home1.jpg);
+  transform: skewX(10deg);
+  background-size: cover;
+  opacity: 10%;
+  margin-left:0;
+}
+
+.Commercial:hover .overlay{
+  width: 100%;
+}
+.Commercial:hover .overlay1{
+  width: 100%;
+}
+.Commercial:hover .OverlayText{
+  width: 100%;
+}
+
+.overlay2{
+  position: absolute;
+  width: 0;
+  height: 100%;
+  left: 100%;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  background-color: rgba(24, 43, 90, 1);
+  margin-left:-10%;
+}
+
+.overlay3{
+  position: absolute;
+  width: 0;
+  height: 100%;
+  left: 100%;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  background-image: url(Images/Home2.jpg);
+  transform: skewX(10deg);
+  background-size: cover;
+  opacity: 10%;
+  margin-left:-10%;
+}
+.ResidencialTextOverlay{
+  font-style: normal;
+  color: #FEFEFE; font-family: Noto Sans;
+  transform: skewX(15deg);
+  margin-left: 25%;
+  margin-top: 25%;
+  height: 33px;
+
+  font-size: 35px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.OverlayText2{
+  position: absolute;
+  width: 0;
+  height: 100%;
+  left: 100%;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  font-family: Noto Sans;
+}
+
+.CommercialInfo2{
+  width: 320px;
+  height: 55px;
+  border: 3px solid #FEFEFE;
+  background: none;
+  transform: skewX(15deg);
+  color: #FEFEFE;
+
+  font-family: Noto Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: 30%;
+  margin-top: 5%;
+}
+
+.Residential:hover .overlay2{
+  width: 100%;
+  left: 0;
+}
+.Residential:hover .overlay3{
+  width: 100%;
+  left: 0;
+}
+.Residential:hover .OverlayText2{
+  width: 100%;
+  left: 0;
 }
 
 .DetailButtonShell{
-  width: 165px; height: 50px; 
-  margin-top: 25px;
+  height: 50px;   
+  margin-top: 45px; 
 }
 
 .DetailButton{
-  padding: 14px;border: 3px solid rgba(24, 43, 90, 1); 
-  text-decoration: none;
+  width: 185px; height: 50px; 
+
   color: rgba(24, 43, 90, 1); 
   padding: 10px; 
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal; font-family: Noto Sans;
+  line-height: normal;  
+  border: 3px solid rgba(24, 43, 90, 1); 
+  text-decoration: none;
+  font-family: Noto Sans;
 }
 
 .Communication{
@@ -346,7 +518,6 @@ word-wrap: break-word;
 }
 
 .CommunicationTextDecorations1{
-color: #182B5A;
 font-family: Roboto;
 font-size: 16px;
 font-style: normal;
@@ -355,6 +526,13 @@ line-height: normal;
 width: 415px; height: 55px;
 margin-top: 25;
 padding-left: 20px;
+}
+
+.CommunicationTextDecorations1::placeholder{
+  color: #182B5A;
+}
+.CommunicationTextDecorations2::placeholder{
+  color: #182B5A;
 }
 
 .CommunicationTextDecorations2{
