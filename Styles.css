@@ -7,6 +7,16 @@
     font-weight: 400;
     font-style: normal;
   }
+  @font-face {
+    font-family: 'Muller';
+    src: local('Muller Regular'), local('Muller-Regular'),
+        url('MullerRegular.woff2') format('woff2'),
+        url('MullerRegular.woff') format('woff'),
+        url('MullerRegular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+
   *{
     margin: 0px;
     
@@ -14,6 +24,12 @@
   ::-webkit-scrollbar {
     display: none;
 }
+  .Container{
+    width: 1920px; 
+    margin: 0px; 
+    overflow-x: hidden;
+  }
+
  .MainGrid{
 display: grid;
 padding: 0;
@@ -26,20 +42,26 @@ grid-template-columns: 60% 40%;
 width: 1920px;
 height: 86px;
 flex-shrink: 0;
+color: rgba(24, 43, 90, 1);
 }
 
 .Logotype{
 display: grid;
 grid-template-columns: 5% 90%;
+margin-left: 100px; margin-top: 18px;
+}
 
+.CompanyNameless{
+  font-family: Leto Sans; 
+  font-weight: 400; 
+  font-size: 22px; 
+  margin-top: 18px;
 }
 
 .MenuItems{
-margin-top: 27px;
-margin-bottom: 30px;
 margin-right: 109px;
 width: 614px;
-height: 49px;
+height: 86px;
 flex-shrink: 0;
 text-decoration: none;
 text-align: center;
@@ -54,33 +76,34 @@ justify-content: space-around;
   margin: 0;
   box-sizing: border-box;
 }
-.Item{
-text-decoration: none;
-color: #000;
+
+.MenuItems a{
+text-decoration:none; 
+display: inline-block;
+line-height: 1; 
+color: black;
+font-size: 16;
 font-family: Roboto;
-font-size: 16px;
-font-style: normal;
 font-weight: 700;
-line-height: normal;
-padding-bottom: 1px;
-position: relative;
-letter-spacing: 0.5px;
-padding: 0 5px;
+word-wrap: break-word;
 }
-.Item :after
-{
-content: "";
-position: absolute;
-background-color: #000;
-height: 3px;
-width: 0;
-left: 0;
-bottom: -5px;
-transition: 0.5s;
+
+.MenuItems a:after {
+  display: block; /*превращаем его в блочный элемент*/
+  content: ""; /*контента в данном блоке не будет поэтому в кавычках ничего не ставим*/
+  height: 3px; /*задаём высоту линии*/
+  width: 0%; /*задаём начальную ширину элемента (линии)*/
+  background-color: #225384; /*цвет фона элемента*/
+  transition: width 0.4s ease-in-out; /*данное свойство отвечает за плавное изменение ширины. Здесь можно задать время анимации в секундах (в данном случае задано 0.4 секунды)*/
 }
-.Item:hover:after{
-  width: 100%;
+
+.MenuItems a:hover:after,
+.MenuItems a:focus:after {
+    width: 100%;
+    text-underline-offset: 10px;
+    text-decoration: underline;
 }
+
 
 .PropertyType{
   background-color: rgba(24, 43, 90, 1);
@@ -91,24 +114,6 @@ transition: 0.5s;
   overflow: hidden;
 }
 
-.BeforeFigure{
-  width: 300px;
-  height: 780px;
-  background: aquamarine;
-  display: block;
-  float: left;
-  position: relative;
-}
-
-.Figure1{
-  transform: skew(-20deg);
-  width: 950px; height: 780px;
-  background: aquamarine;
-  position: absolute;
-  display: block;
-  float: left;
-  margin-left: 0px;
-}
 .AboutUs{
   display: grid;
   grid-template-columns: 50% 50%;
@@ -116,30 +121,252 @@ transition: 0.5s;
   margin-right: auto;
 }
 .ViewBoard{
-  height: 866px;
+  color: rgba(24, 43, 90, 1); 
+  width: 1920px; height: 780px;
   margin: 0%;
 }
+.TheBannerShell{
+  width: 1920px; height: 780px; 
+  display: inline-block; 
+  position: absolute;
+}
+
+.BannerBackground{
+  width: 100%; height: 100%;
+  position: relative;
+  filter: hue-rotate(365deg);
+  filter: brightness(0,2);
+  filter: drop-shadow(3);
+  transform: scaleX(-1);
+  object-fit: cover;
+}
+
+.RentServices{
+  position: absolute;
+  display: inline-block; 
+  margin-top: 300px; margin-left: 120px;
+}
+
+.BannerText{
+  font-family:Noto Sans; 
+  font-size: 40px;
+}
+
+.ServicesButton{
+  border: 3px solid black; width: 230px;
+  height: 50px;margin-top: 20px;
+  padding-top: 10px;
+}
+
+.ServLink{
+  text-decoration: none;
+  color: rgba(24, 43, 90, 1);  
+  font-family: Leto Sans; font-size: 16px; text-align: center;
+  margin-left: 25px;
+}
+
 .Nameless{
   font-family: Leto Sans;
 }
 .Commercial{
+  position: relative;
   width: 1157px;
+  margin-left: -200px;
+  transform: skewX(-15deg);
+  background-image: url(Images/WavesVector.png);
+  width: 1157px; height: 739px;
+  overflow: hidden;
+  background-size: cover;
+  box-shadow: 0 1rem 5rem rgba(24, 43, 90, 1);
 }
+
+.CommercialBanner{
+  height: 639px; width: 100%;
+  transform: skewY(15deg) rotate(-15deg);
+  margin-left: 150px;
+  background-size: cover;
+  margin-top: -50px;
+}
+
+.CommercialText{
+  font-style: normal !important;
+  color: #FEFEFE; font-family: Noto Sans;
+  transform: skewX(15deg);
+  margin-left: 45%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  height: 33px;
+}
+
+.Residential{
+  margin-left: 8px;
+  transform: skewX(-15deg);
+  background-image: url(Images/WavesVector.png);
+  width: 1157px; height: 739px;
+  overflow: hidden;
+  background-size: cover;
+}
+
+.ResidentialText{
+  font-style: normal !important;
+  color: #FEFEFE; font-family: Noto Sans;
+  transform: skewX(15deg);
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 25%;
+}
+
+.ResidentialBanner{
+  transform: skewX(15deg);
+  width: 100%; height: 639px;
+  object-fit: fill;
+  margin-left: -100px;
+}
+
+
+.AboutUs{
+  width: 1920px; 
+  height: 780px; 
+  background-color: white;
+}
+
+.ImagesPart{
+  margin-left: 150px; 
+  margin-right: auto; 
+  margin-top: 125px; 
+  margin-bottom: 40px; 
+  float: left;
+}
+
+.WavesBackShell{
+  width: 763px;
+  height: 510px; 
+  background-color: rgba(24, 43, 90, 1); 
+  position: absolute;
+}
+
+.BackWaves{
+  width: 763px; height: 510px;
+}
+
+.FlatsFrontShell{
+  position: absolute; margin: 25px;
+}
+
+.FrontFlats{
+  width: 763px; height: 510px;
+}
+
+.TextPart{
+  margin-left: auto; 
+  margin-top: auto; 
+  margin-bottom: auto; 
+  margin-right: auto; 
+  float: right; width: 804px;
+}
+
+.TPh2{
+  font-family: Muller; 
+  color: rgba(24, 43, 90, 1);
+}
+
+.TPtext{
+  width: 804px;
+  height: 329px;
+  font-family: Roboto;
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background-color: rgba(24, 43, 90, 1);
+}
+
+.overlay1{
+  position: absolute;
+  width: 100%;
+  height: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  transition: 0.3s;
+  background-image: url(Images/Home1.jpg);
+  opacity: 50%;
+}
+
+.Commercial:hover .overlay1{
+  height: 100%;
+}
+
+.DetailButtonShell{
+  width: 165px; height: 50px; 
+  margin-top: 25px;
+}
+
+.DetailButton{
+  padding: 14px;border: 3px solid rgba(24, 43, 90, 1); 
+  text-decoration: none;
+  color: rgba(24, 43, 90, 1); 
+  padding: 10px; 
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal; font-family: Noto Sans;
+}
+
 .Communication{
+  display: grid; 
+  grid-template-rows: 30% 50% 20%; 
+  position: relative;
+  overflow: hidden;
   width: 1920px;
   height: 498px;
   background-color: rgba(24, 43, 90, 1);
 }
-.CommunicationTextDecorations{
+
+.CRMh2{
+  color: #FEFEFE;
+  margin-top: 100px;
+  margin-bottom: 43px;
+  text-align: center;
+  font-family: Noto Sans;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.CRMform{
+  display: grid; grid-template-rows: 30% 50% 20%;
+  margin-right: auto; margin-left: auto;
+  margin-top: 43px;
+  width: 415px;
+  height: 254px;
+}
+
+.CommunicationTextDecorations1{
 color: #182B5A;
 font-family: Roboto;
 font-size: 16px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
-::-webkit-input-placeholder {
-    color: #182B5A;
+width: 415px; height: 55px;
+margin-top: 25;
+padding-left: 20px;
 }
+
+.CommunicationTextDecorations2{
+color: #182B5A;
+font-family: Roboto;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+width: 415px; height: 55px;
+margin-bottom: -40px;
+padding-left: 20px;
 }
 .RobotoFont{
     color: #FEFEFE;
@@ -180,10 +407,75 @@ line-height: normal;
       margin-top: 60px; margin-bottom: 59px; 
       position: absolute;
 }
-#MyRect{
-  fill: black;
+.ContactText p{
+    line-height: 30px;
+    color: #FEFEFE;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
-.rsImg{
-              transform: skewX(15deg);
 
+.slider{
+  width: 1920px; height: 780px; 
+  overflow: hidden;
+}
+.middle{
+  position: absolute;
+}
+
+.navigation{
+  position: absolute;
+  bottom: 16px;
+  left: 10%;
+  bottom: 50px;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.bar{
+  height: 4px;
+  width: 35px;
+  margin: 6px;
+  cursor: pointer;
+  background-color: #000;
+  opacity: .7;
+  transition: all .4s ease;
+}
+
+.bar:hover{
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+
+input[name="r"] {
+  position: absolute;
+  visibility: hidden;
+}
+
+.slides{
+  width: 400%;
+  height: 100%;
+  display: flex;
+}
+.slide{
+  width: 25%;
+  transition: all .6s ease;
+}
+.slide img {
+  width: 1920px;
+  height: 780px;
+}
+#r1:checked ~.s1{
+  margin-left: 0;
+}
+#r2:checked ~.s1{
+  margin-left: -25%;
+}
+#r3:checked ~.s1{
+  margin-left: -50%;
+}
+#r4:checked ~.s1{
+  margin-left: -75%;
 }
