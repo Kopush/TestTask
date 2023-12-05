@@ -35,25 +35,51 @@ grid-template-columns: 5% 90%;
 }
 
 .MenuItems{
-display: grid;
-grid-template-columns: 20% 20% 20% 20% 20%;
+margin-top: 27px;
+margin-bottom: 30px;
+margin-right: 109px;
+width: 614px;
+height: 49px;
+flex-shrink: 0;
+text-decoration: none;
+text-align: center;
+display: flex;
+align-items: center;
+justify-content: space-around;
+}
+*,
+*:before,
+*:after{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.Item{
+text-decoration: none;
 color: #000;
 font-family: Roboto;
 font-size: 16px;
 font-style: normal;
 font-weight: 700;
 line-height: normal;
-margin-top: 37px;
-margin-bottom: 30px;
-margin-right: 109px;
-width: 614px;
-height: 49px;
-flex-shrink: 0;
+padding-bottom: 1px;
+position: relative;
+letter-spacing: 0.5px;
+padding: 0 5px;
 }
-
-.Item{
-  display: inline-block;
-  text-align: center;
+.Item :after
+{
+content: "";
+position: absolute;
+background-color: #000;
+height: 3px;
+width: 0;
+left: 0;
+bottom: -5px;
+transition: 0.5s;
+}
+.Item:hover:after{
+  width: 100%;
 }
 
 .PropertyType{
