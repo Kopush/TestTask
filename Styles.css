@@ -19,7 +19,8 @@
 
   *{
     margin: 0px;
-    list-style-type: none
+    list-style-type: none;
+    box-sizing: border-box;
   }
   ::-webkit-scrollbar {
     display: none;
@@ -29,12 +30,6 @@
     margin: 0px; 
     overflow-x: hidden;
   }
-
- .MainGrid{
-display: grid;
-padding: 0;
-margin: 0;
-}
 
 .Menu{
 display: grid;
@@ -55,7 +50,8 @@ margin-left: 100px; margin-top: 18px;
   font-family: Leto Sans; 
   font-weight: 400; 
   font-size: 22px; 
-  margin-top: 18px;
+  margin-top: 20px;
+  margin-left: 15px;
 }
 
 .MenuItems{
@@ -84,14 +80,12 @@ word-wrap: break-word;
 li > a {
   position: relative;
   color: black;
-  text-decoration: none;
   padding-top: 45px;
   padding-bottom: 35px;
 }
 
 li > a:hover {
   color: black;
-  text-decoration: none;
 }
 
 li > a:before {
@@ -101,13 +95,12 @@ li > a:before {
   height: 4px;
   bottom: 0;
   left: 0;
+  right: 0%;
   background-color: black;
   visibility: hidden;
-  -webkit-transform: scaleX(0);
-      transform: scaleX(0);
-     -webkit-transition: all 0.3s ease-in-out 0s;
-     transition: all 0.3s ease-in-out 0s;
-     text-decoration: none;
+  transform: scaleX(0);
+  transition-property: left right;
+  transition-duration: 0.5s;
 }
 
 li > a:hover:before {
@@ -116,6 +109,7 @@ li > a:hover:before {
   transform: scaleX(1);
   text-decoration: none;
 }
+
 
 .PropertyType{
   background-color: rgba(24, 43, 90, 1);
@@ -134,8 +128,10 @@ li > a:hover:before {
 }
 .ViewBoard{
   color: rgba(24, 43, 90, 1); 
-  width: 1920px; height: 780px;
-  margin: 0%;
+  width: 100%; 
+  height: 780px;
+  overflow: hidden;
+  position: relative;
 }
 .TheBannerShell{
   width: 1920px; height: 780px; 
@@ -160,12 +156,19 @@ li > a:hover:before {
 }
 
 .BannerText{
-  font-family:Noto Sans; 
+  color: #182B5A;
+  font-family: Noto Sans;
   font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 256px;
 }
 
 .ServicesButton{
   border: 3px solid black; width: 230px;
+  padding: 10px;
+  padding-left: 0px;
   height: 50px;margin-top: 20px;
 }
 
@@ -724,6 +727,10 @@ padding-left: 20px;
 #ContactInformation{
   line-height: 30px;
 }
+
+
+
+
 .slider{
   width: 1920px; height: 780px; 
   overflow: hidden;
@@ -731,7 +738,6 @@ padding-left: 20px;
 .middle{
   position: absolute;
 }
-
 .navigation{
   position: absolute;
   bottom: 16px;
@@ -740,7 +746,6 @@ padding-left: 20px;
   transform: translateX(-50%);
   display: flex;
 }
-
 .bar{
   height: 4px;
   width: 35px;
@@ -750,17 +755,14 @@ padding-left: 20px;
   opacity: .7;
   transition: all .4s ease;
 }
-
 .bar:hover{
   opacity: 0.8;
   transform: scale(1.1);
 }
-
 input[name="r"] {
   position: absolute;
   visibility: hidden;
 }
-
 .slides{
   width: 400%;
   height: 100%;
@@ -769,11 +771,16 @@ input[name="r"] {
 .slide{
   width: 25%;
   transition: all .6s ease;
+  object-fit: contain;
 }
-.slide img {
-  width: 1920px;
-  height: 780px;
+.InfoPreview{
+  margin-left: 161px;
 }
+.slide p{
+  font-family: Roboto;
+  
+}
+
 #r1:checked ~.s1{
   margin-left: 0;
 }
@@ -785,4 +792,17 @@ input[name="r"] {
 }
 #r4:checked ~.s1{
   margin-left: -75%;
+}
+
+#img1{
+  background-image: url(Images/Pr1.jpg);
+}
+#img2{
+  background-image: url(Images/Pr5.jpg);
+}
+#img3{
+  background-image: url(Images/Pr9.jpg);
+}
+#img4{
+  background-image: url(Images/Pr7.png);
 }
