@@ -3,6 +3,8 @@
   <head>
     <link rel="stylesheet" href="CSS/Styles.css">
     <link rel="stylesheet" href="CSS/Mobile(480px).css">
+    <link rel="stylesheet" href="Event Handler.js">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300&family=Noto+Sans&family=Open+Sans:wght@300&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
@@ -14,28 +16,39 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300&family=Noto+Sans&family=Open+Sans:wght@300&family=Roboto+Condensed:wght@700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>"Salesprodazha.ru</title>
   </head>
 
 <container class="Container">
 <body>
-      <header class="Menu">
+      <header class="Menu open">
         <div class="Logotype">
-            <img src="Images/Logo 2.png">
+            <img class="LogoImg" src="CSS/Images/Logo 2.png">
             <h1 class="CompanyNameless">Salesprodazha.ru</h1>
         </div>
-            <ul class="MenuItems">
-                <li><a href="#ar">АРЕНДА</a></li>
 
-                <li><a href="#prod">ПРОДАЖА</a></li>
 
-                <li><a href="#buy">ПОКУПКА</a></li>
+        <div class="container header__container">
+          
+          <button class="MenuButton" id="menu_btn" onclick="click()"></button>
 
-                <li><a href="#about">О КОМПАНИИ</a></li>
+                  <nav class="MobileMenu" id="mob">
+                    <ul class="MenuItems">
+                          <li><a href="#ar">АРЕНДА</a></li>
 
-                <li><a href="#contact">КОНТАКТЫ</a></li>
-                    
-            </ul>
+                          <li><a href="#prod">ПРОДАЖА</a></li>
+
+                          <li><a href="#buy">ПОКУПКА</a></li>
+
+                          <li><a href="#about">О КОМПАНИИ</a></li>
+
+                          <li><a href="#contact">КОНТАКТЫ</a></li>
+                      </ul>
+                    </nav>
+        </div>
+        
+                  
     </header>
 
     <div class="ViewBoard"><!-- Баннер --> 
@@ -50,7 +63,7 @@
             <div class="slide s1" id="img1">
               <div class="InfoPreview">
                 <h2 class="BannerText">Услуги аренды и продажи недвижимости
-                    <br>в г. [Город]</h2>
+                 в г. [Город]</h2>
                     <div class="ServicesButton">
                     <a class="ServLink"
                     href="#crm">ЗАКАЗАТЬ УСЛУГИ</a>
@@ -62,7 +75,7 @@
             <div class="slide" id="img2">
                     <div class="InfoPreview">
                     <h2 class="BannerText">С нами ваш бизнес 
-                    <br>поднимется на новую высоту!</h2>
+                    поднимется на новую высоту!</h2>
                     <p>Ищете уютное и комфортное место для своего офиса? 
                       <br>Хотите оптимизировать расходы на аренду? 
                       <br>Тогда наше предложение специально для вас!
@@ -80,7 +93,7 @@
                   <div class="slide" id="img3">
                     <div class="InfoPreview">
                     <h2 class="BannerText">Незабываемый Новый Год 
-                      <br>в горах ждет Вас!</h2>
+                    в горах ждет Вас!</h2>
                     <p>Успейте забронировать свой идеальный отдых в горах на Новый Год! <br>Посуточная аренда домов с максимальным комфортом и уютом. 
                     <br>Забудьте о городской суете и насладитесь красотой природы, 
                     <br>чистым горным воздухом и праздничной атмосферой.</p>
@@ -93,7 +106,7 @@
                   
                   <div class="slide" id="img4">
                     <div class="InfoPreview">
-                      <h2 class="BannerText">Мечтаете о своей уютной квартире?</h2>
+                      <h2 class="BannerText">Мечтаете о своей уютной квартире? Новостройки в г.[Город]</h2>
                       <p>У нас есть то, что вам нужно!
                       <br>Мы предлагаем квартиры в современной новостройке. 
                       <br>Высокое качество строительства и развитая инфраструктура.  
@@ -133,6 +146,7 @@
                 <h2 class="CommercialTextOverlay">Коммерческая недвижимость</h2>
                 <button type="button" class="CommercialInfo">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</button>
               </div>
+              <h2 class="CommercialText2">Коммерческая недвижимость</h2>
       </div>
 
       <!-- Жилая недвижимость" --> 
@@ -141,14 +155,14 @@
            <h2 class="ResidentialText">Жилая недвижимость<h2>
             
        <img class="ResidentialBanner" 
-       src="Images/Home2.jpg">
+       src="CSS/Images/Home2.jpg">
           <div class="overlay2"></div>
                       <div class="overlay3"></div>
                       <div class="OverlayText2">
                         <h2 class="ResidencialTextOverlay">Жилая недвижимость</h2>
                         <button type="button" class="CommercialInfo2">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</button>
                       </div>
-
+                  <h2 class="ResidentialText2">Жилая недвижимость</h2>
       </div>
     </div>
 
@@ -156,11 +170,11 @@
 
         <div class="ImagesPart">
             <div class="WavesBackShell">
-                    <img class="BackWaves" src="Images/WavesVector.png" >
+                    <img class="BackWaves" src="CSS/Images/WavesVector.png" >
             </div>
 
             <div class="FlatsFrontShell" style="position: absolute; margin: 30px;">
-                    <img class="FrontFlats" src="Images/Home3.jpg">
+                    <img class="FrontFlats" src="CSS/Images/Home3.jpg">
             </div>
         </div>
       
@@ -168,14 +182,14 @@
       <div class="TextPart">
         <h2 class="TPh2">О нас</h2>
         <p class="TPtext">Lorem ipsum – псевдо-латинский текст, который используется для веб дизайна, типографии,
-         <br>оборудования, и распечатки вместо английского текста для того, чтобы сделать ударение не на
-         <br>содержание, а на элементы дизайна. Такой текст также называется как заполнитель.
-         <br>
-         <br>Это очень удобный инструмент для моделей (макетов). Он помогает выделить визуальные элементы в
-         <br>документе или презентации, например текст, шрифт или разметка. Lorem ipsum по большей части
-         <br>является элементом латинского текста классического автора и философа Цицерона. Слова и буквы
-         <br>были заменены добавлением или сокращением элементов, поэтому будет совсем неразумно пытаться
-          передать содержание; это не гениально, не правильно, используется даже не понятный латинский.</p>
+        оборудования, и распечатки вместо английского текста для того, чтобы сделать ударение не на
+        содержание, а на элементы дизайна. Такой текст также называется как заполнитель.
+        <br class="Interval">
+        <br class="NewParagraph">Это очень удобный инструмент для моделей (макетов). Он помогает выделить визуальные элементы в
+        документе или презентации, например текст, шрифт или разметка. Lorem ipsum по большей части
+        является элементом латинского текста классического автора и философа Цицерона. Слова и буквы
+        были заменены добавлением или сокращением элементов, поэтому будет совсем неразумно пытаться
+        передать содержание; это не гениально, не правильно, используется даже не понятный латинский.</p>
           <div class="DetailButtonShell">
             <a class="DetailButton" href="">ПОДРОБНЕЕ</a>
           </div>
@@ -202,49 +216,78 @@
         
       <button class="SendButton" type="button">ОТПРАВИТЬ</button>
       
-                <img src="Images/Vector.png" class="DecorativeElement1">
-                <img src="Images/Vector (1).png" class="DecorativeElement2">
+                <img src="CSS/Images/Vector.png" class="DecorativeElement1">
+                <img src="CSS/Images/Vector (1).png" class="DecorativeElement2">
     </div>
 
     <div class="Adress"><!-- Адрес и реквизиты --> 
-      <img src="Images/Map.png" class="Map">
+      <img src="CSS/Images/Map.png" class="Map">
 
       <div class="AdressShell">
         <h2 class="NotoSansFont">Контакты и юридическая информация</h2>
 
         <div class="SupportiveShell">
           <div class="Icons">
-            <img src="Images/Login 1.svg" id="pin">
-            <img src="Images/Phone 1.svg" id="phone">
-            <img src="Images/@.svg"       id="@">
-            <img src="Images/Subtract.svg"id="hours">
+
+          <div class="Wrapper">
+            <img src="CSS/Images/Login 1.svg" id="pin">
+            <p class="RobotoFont" id="phadress">121069, г. Москва, ул. Поварская, дом 23, строение 4</p>
           </div>
 
-          <div class="AdressInfo">
-            <p class="RobotoFont" id="phadress">121069, г. Москва, ул. Поварская, дом 23, строение 4</p>
+          <div class="Wrapper">
+            <img src="CSS/Images/Phone 1.svg" id="phone">
             <p class="RobotoFont" id="phnumber">+7 (495)258-6100</p>
+          </div>
+
+          <div class="Wrapper">
+            <img src="CSS/Images/@.svg" id="@">
             <p class="RobotoFont" id="phmail">info@sksbank.ru</p>
+          </div>
+            
+          <div class="Wrapper">
+            <img src="CSS/Images/Subtract.svg" id="hours">
             <p class="RobotoFont" id="phclock">Пн-Пт: 9:00 - 18:00</p>
+          </div>
+            
+          <div class="Wrapper">
+            <img src="CSS/Images/Vector 2.png" id="line" class="Line">
+          </div>
           </div>
 
           <div class="Requisites">
-            <p class="RobotoFont" id="INN">ИНН:</p>
-            <p class="RobotoFont" id="BIK">БИК:</p>
-            <p class="RobotoFont" id="OKPO">ОКПО:</p>
-            <p class="RobotoFont" id="OGRN">ОГРН:</p>
+
+            <div class="Wrapper">
+              <p class="RobotoFont" id="INN">ИНН:</p>
+            <p class="RobotoFont" id="inn">7750005845</p>
+            </div>
+            
+            <div class="Wrapper">
+               <p class="RobotoFont" id="BIK">БИК:</p>
+               <p class="RobotoFont" id="bik">044525247</p>
+            </div>
+
+            <div class="Wrapper">
+              <p class="RobotoFont" id="OKPO">ОКПО:</p>
+              <p class="RobotoFont" id="okpo">29319716</p>
+            </div>
+           
+            <div class="Wrapper">
+              <p class="RobotoFont" id="OGRN">ОГРН:</p>
+              <p class="RobotoFont" id="ogrn">1137711000096 (05.07.2013)</p>
+            </div>
+            
           </div>
 
-          <div class="RequisitesInfo">
-            <p class="RobotoFont" id="inn">7750005845</p>
-            <p class="RobotoFont" id="bik">044525247</p>
-            <p class="RobotoFont" id="okpo">29319716</p>
-            <p class="RobotoFont" id="ogrn">1137711000096 (05.07.2013)   </p>
-          </div>
         </div>
 
       </div>
 
     </div>
+
+    <div class="Map2">
+      <img src="CSS/Images/Map.png" >
+    </div>
+    
 
     <div id="contact" class="Contacts"><!-- Контактная информация --> 
       <svg viewBox="0 0 1918 273" xmlns="http://www.w3.org/2000/svg">

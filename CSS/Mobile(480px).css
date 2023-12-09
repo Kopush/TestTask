@@ -1,32 +1,730 @@
 @media (max-width: 480px) {
     .Container{
-      width: 480px; 
+      width: 100%; 
+      max-width: 480px;
       margin: 0px; 
       overflow-x: hidden;
   }
+  .header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
     .Menu{
       display: grid;
       grid-template-columns: 60% 40%;
       width: 480px;
-      height: 86px;
+      height: 50px;
       flex-shrink: 0;
       color: rgba(24, 43, 90, 1);
       }
+      
+      .Logotype{
+        display: grid;
+        grid-template-columns: 5% 90%;
+        margin-left: 20px;
+        margin-top: 11,5px;
+        }
+        .LogoImg{
+          height: 27px;
+          width: 23px;
+        }
+        .MenuButton{
+          background-image: url(Images/Menu.svg);
+          height: 50px;
+          width: 50px;
+          padding: 10px;
+          border: none;
+          display: block;
+          margin-left: 110px;
+          cursor: pointer;
+        }
+        .MobileMenu{       
+          position: absolute;
+          right: -100px;
+          top: 0;
+          width: 100px;
+          margin-top: 50px;
+          display: block;
+   
+          
+          
+          height: 300px;
+
+          visibility: hidden;
+          transition: transform .5s, visibility .5s;
+          will-change: transform;
+        }
+        .Menu.open .MobileMenu{
+          position: absolute;
+          margin-top: 50px;
+          transform: translateX(-100%);
+          visibility: visible;
+      }
+        .MenuItems{
+          position: absolute;
+          display: block;
+          right: -100px;
+          width: 100px;
+          height: 300px;
+          font-size: 14px;
+          background-color: rgba(24, 43, 90, 1);
+          align-items: center;
+          list-style-type: none;
+
+          padding: 0%;
+          margin: 0%;
+          right: 0;
+          flex-shrink: 0;
+          }
+
+          .MenuItems li{
+            height: 50px;
+          }
+          .MenuItems a{
+            color: #f1f1f1;
+          }
+
+          li > a {
+            position: relative;
+            padding-top: 45px;
+            padding-bottom:0px;
+          }
+          li > a:hover:before {
+            visibility: collapse;
+            -webkit-transform: none;
+            transform: none;
+            text-decoration: none;
+          }
+        .CompanyNameless{
+          font-family: Leto Sans; 
+          font-weight: 400; 
+          font-size: 14px; 
+          margin-left: 21,4px;
+          margin-top: 5px;
+        }
   
       .ViewBoard{
         color: rgba(24, 43, 90, 1); 
-        width: 100%; 
+        width: 480px; 
         height: 300px;
         overflow: hidden;
         position: relative;
       }
+      /**Стиль текста для фреймов слайдера**/
+.BannerText{
+  text-align: center;
+  color: #182B5A;
+  font-family: Noto Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 95px;
+  width: 223px;
+  height: 50px;
+}
+.InfoPreview{
+  margin-top: -20px;
+  margin-bottom: auto;
+}
+.InfoPreview p{
+  font-size: 1px;
+  visibility: collapse;
+}
+/**Оболочка ссылки**/
+.ServicesButton{
+  border: 3px solid black; 
+  width: 230px;
+  padding: 10px;
+  padding-left: 0px;
+  position: relative;
+}
+/**Стиль ссылки для фреймов слайдера**/
+.ServLink{
+  text-decoration: none;
+  color: rgba(24, 43, 90, 1);  
+  font-family: Leto Sans; font-size: 16px; text-align: center;
+  margin-top: 10px;
+  margin-bottom: -30px;
+  margin-left: 30px;
+}
+
+.slider{
+  width: 100%;
+  max-width: 992px; 
+  height: 300px; 
+  overflow: hidden;
+}
+.middle{
+  position: absolute;
+}
+.navigation{
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  bottom: 50px;
+  transform: translateX(-50%);
+  display: flex;
+}
+.bar{
+  height: 4px;
+  width: 35px;
+  margin: 6px;
+  cursor: pointer;
+  background-color: #000;
+  opacity: .7;
+  transition: all .4s ease;
+}
+.bar:hover{
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+input[name="r"] {
+  position: absolute;
+  visibility: hidden;
+}
+.slides{
+  width: 400%;
+  height: 100%;
+  display: flex;
+}
+.slide{  
+  width: 100%;
+  max-width: 480px;
+  transition: all .6s ease;
+  object-fit: contain;
+}
+.InfoPreview{
+  margin-left: 129px;
+  width: 223px;
+  height: 50px;
+}
+.slide p{
+  font-family: Roboto; 
+}
+
+#r1:checked ~.s1{
+  margin-left: 0;
+}
+#r2:checked ~.s1{
+  margin-left: -25%;
+}
+#r3:checked ~.s1{
+  margin-left: -50%;
+}
+#r4:checked ~.s1{
+  margin-left: -75%;
+}
+
+#img1{
+  background-image: url(Images/Pr1.jpg);
+  background-size: cover;
+}
+#img2{
+  background-image: url(Images/Pr5.jpg);
+  background-size: cover;
+}
+#img3{
+  background-image: url(Images/Pr9.jpg);
+  background-size: cover;
+}
+#img4{
+  background-image: url(Images/Pr7.jpg);
+  background-size: cover;
+}
   
-      .PropertyType{
-        background-color: rgba(24, 43, 90, 1);
-        width: 480px; height: 258px;
-        display: grid;
-        grid-template-columns: 50% 50%;
-        margin: 0%;
-        overflow: hidden;
-      }
+/**
+   * ИНТЕРАКТИВНЫЙ БАННЕР "ВИДЫ НЕДВИЖИМОСТИ"
+**/
+
+/**Оболочка блока**/
+.PropertyType{
+  background-color: rgba(24, 43, 90, 1);
+  width: 480px; height: 260px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin: 0%;
+  overflow: hidden;
+}
+/**Оболочка блока с коммерческой недвижимостью**/
+.Commercial{
+  width: 235px; height: 260px;
+  margin-left: 0%;
+  transform: none;
+}
+/**Блок коммерческой недвижимости**/
+.CommercialBanner{
+  transform: none;
+  margin-left: -40px;
+  margin-top: 60px;
+  width: 335px;
+  height: 200px;
+  object-fit: contain;
+  position: relative;
+}/**Стиль текста для overlay блока с жилой недвижимостью**/
+
+/**Стиль текста для блока коммерческой недвижимости**/
+.CommercialText{
+  display: none;
+}
+.CommercialText2{
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  position: relative;
+  font-style: normal;
+  color: #FEFEFE; font-family: Noto Sans;
+  transform: none;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  margin-left: 0%;
+}
+/**Оболочка блока с жилой недвижимостью**/
+.Residential{
+  width: 240px; height: 260px;
+  margin-left: 0%;
+  transform: none;
+}
+/**Блок с жилой недвижимостью**/
+.ResidentialBanner{
+  margin-bottom: 0px;
+  transform: none;
+  margin-left: 0%;
+  width: 240px;
+  height: 200px;
+  object-fit: cover;
+}
+.ResidentialText2{
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  position: relative;
+  font-style: normal;
+  color: #FEFEFE; font-family: Noto Sans;
+  transform: none;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  margin-left: 0%;
+}
+/**Стиль текста для блока с жилой недвижимостью**/
+.ResidentialText{
+  display: none;
+}
+/**Оболочка блока с overlay текстовой информацией**/
+.OverlayText{
+  visibility: collapse;
+}
+/**Стиль для кнопки "ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ"(жилая недвижимость)**/
+.CommercialInfo{
+  visibility: collapse;
+}
+/**Блок-подложка overlay(коммерческая недвижимость)**/
+.overlay{
+  visibility: collapse;
+}
+/**Блок-image overlay(коммерческая недвижимость)**/
+.overlay1{
+  visibility: collapse;
+}
+/**Оболочка блока с overlay текстовой информацией**/
+.OverlayText2{
+  visibility: collapse;
+}
+
+.ResidencialTextOverlay{
+  visibility: collapse;
+}
+
+.CommercialInfo2{
+  visibility: collapse;
+}
+/**Блок-подложка overlay(жилая недвижимость)**/
+.overlay2{
+  visibility: collapse;
+}
+/**Блок-image overlay(жилая недвижимость)**/
+.overlay3{
+  visibility: collapse;
+}
+
+.Residential:hover .overlay2{
+  visibility: collapse;
+}
+.Residential:hover .overlay3{
+  visibility: collapse;
+}
+.Residential:hover .OverlayText2{
+  visibility: collapse;
+}
+
+
+/**
+   * БАННЕР "О НАС"
+**/
+.AboutUs{
+  display: block;
+  width: 480px;
+  height: 434px;
+}
+.TextPart{
+  margin-left: 20px;
+  margin-right: 25px;
+  width: 440px;
+}
+
+.TPh2{
+  margin-top: 42px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+}
+.Interval{
+  display: none;
+}
+.NewParagraph{
+  display: none;
+}
+.TPtext{
+  width: 430px;
+  height: auto;
+
+  margin-right: 20px;
+
+  margin-top: 21px;
+  font-family: Roboto;
+  color: #000;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+}
+.TPtext p{
+  width: 440px;
+  height: 328px;
+}
+
+.TheBannerShell{
+  width: 440px; height: 780px; 
+  display: inline-block; 
+  position: absolute;
+}
+
+
+.RentServices{
+  position: absolute;
+  display: inline-block; 
+  margin-top: 300px; margin-left: 120px;
+}
+
+.DetailButtonShell{
+  margin-top: 40px;
+
+}
+
+.DetailButton{
+  width: 150px; height: 40px; 
+  margin-left: 130px;
+
+  margin-top: 40px;
+  color: rgba(24, 43, 90, 1); 
+  padding: 10px; 
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;  
+  padding-left: 33px;
+  padding-right: 33px;
+  border: 3px solid rgba(24, 43, 90, 1); 
+  text-decoration: none;
+  font-family: Noto Sans;
+}
+.Nameless{
+  font-family: Leto Sans;
+}
+.ImagesPart{
+  display: none;
+}
+
+
+/**
+   * ФОРМА СВЯЗИ С КЛИЕНТОМ
+**/
+.Communication{
+  display: grid; 
+  grid-template-rows: 30% 50% 20%; 
+  position: relative;
+  overflow: hidden;
+  width: 480px;
+  height: 389px;
+  background-color: rgba(24, 43, 90, 1);
+}
+
+.CRMh2{
+  width: 282px;
+  height: 50px;
+  margin-right: auto; margin-left: auto;
+
+  color: #FEFEFE;
+  margin-top: 48px;
+  margin-bottom: 22px;
+  text-align: center;
+  font-family: Noto Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.CRMform{
+  display: grid; grid-template-rows: 30% 50% 20%;
+  margin-right: auto; margin-left: auto;
+  margin-top: 0;
+  width: 415px;
+  height: 254px;
+}
+
+.CommunicationTextDecorations1{
+font-family: Roboto;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+width: 361px; height: 50px;
+margin-top: 25;
+margin-right: auto; margin-left: auto;
+}
+
+.CommunicationTextDecorations1::placeholder{
+  color: #182B5A;
+}
+.CommunicationTextDecorations2::placeholder{
+  color: #182B5A;
+}
+
+.CommunicationTextDecorations2{
+color: #182B5A;
+font-family: Roboto;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+width: 361px; height: 50px;
+margin-right: auto; margin-left: auto;
+padding-left: 20px;
+}
+
+.SupportiveDiv{
+  display: inline-block; 
+  height: 19px; 
+  width: 361px;
+  margin-top: -47px;
+}
+
+.SupportiveDiv p{
+  display: inline-block;
+  float:left;
+  font-size: 14px;
+  margin-top: 5px;
+  position: absolute;
+  margin-left: 5px;
+}
+
+.SupportiveDiv a{
+  display: inline-block;
+  float:left;
+  font-size: 14px;
+  margin-top: 5px;
+  position: absolute;
+  margin-left: 116px;
+  text-decoration-line: underline;
+}
+
+.CheckboxPolicy{
+  width: 20px;
+  height: 20px;
+}
+
+.SendButton{
+  color: #FEFEFE;
+  font-family: Noto Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background: none;
+  border: 3px solid #FEFEFE;
+  width: 170px; height: 50px;
+  margin-top: -60px;
+  margin-right: auto; margin-left: auto;
+}
+
+.DecorativeElement1{
+  display: none;
+}
+
+.DecorativeElement2{
+  display: none;
+}
+
+/**
+   * АДРЕС
+**/
+.Adress{
+  width: 480px;
+  height: 491px;
+  background-color: #FEFEFE;
+  display: block;
+}
+.Map{
+display: none;
+}
+.Map2{
+  position: relative;
+  display: block;
+  width: 480; height: 298px;
+}
+.Map2 img{
+  object-fit: contain;
+  width: 480; height: 298px;
+  background-position: center;
+}
+.AdressShell{
+display: grid; grid-template-rows: 20% 80%;
+width: 480px;
+height: 491px;
+margin-left: auto; 
+margin-right: auto;
+}
+.AdressShell h2{
+  margin-top: 45px;
+margin-left: auto; 
+margin-right: auto;
+font-size: 18px;
+}
+.SupportiveShell{
+display: grid; grid-template-rows: 12,5% 12,5% 12,5% 12,5% 12,5% 12,5% 12,5% 12,5%;
+grid-template-columns: none;
+margin-left: auto; 
+margin-right: auto;
+width: 377px;
+}
+.Wrapper{
+  display: flex;
+  margin-left: auto; 
+  margin-right: auto;
+}
+.Line{
+  visibility: visible;
+  margin-top: 50px;
+  margin-bottom: 0px;
+  margin-left: -25px;
+}
+#line{
+  width: 440px; height: 2px;
+  margin-top: 39px;
+}
+.Icons{
+  margin-left: -15px; 
+  margin-right: auto;
+
+  display: flex; flex-direction: column;
+}
+.Icons img{
+width: 20px;
+height: 20px;
+background-size: contain;
+margin-top: 15px;
+}
+.Icons p{
+  color: rgba(0, 0, 0, 1);
+  margin-top: 18px;
+  margin-left: 5px;
+  width: auto;
+  display: flex; flex-direction: column;
+  font-size: 14px;
+}
+#pin{
+margin-top: 0%;
+}
+.AdressInfo{
+display: flex; flex-direction: column;
+}
+.AdressInfo p{
+color: rgba(0, 0, 0, 1);
+margin-top: 22px;
+font-size: 14px;
+}
+#phadress{
+margin-top: 3px;
+}
+.Requisites{
+  margin-left: 50px;  
+  margin-right: auto;
+display: flex; flex-direction: column;
+}
+.Requisites p{
+color: rgba(24, 43, 90, 1); margin-top: 24px;
+font-size: 14px;
+}
+#INN{
+margin-top: 0%;
+}
+.RequisitesInfo{
+display: flex; flex-direction: column;
+}
+.RequisitesInfo p{
+color: rgba(0, 0, 0, 1);margin-top: 24px;
+}
+#inn{
+margin-top: 0%;
+}
+
+/**
+   * КОНТАКТЫ
+**/
+.Contacts{
+  display: block;
+  background-color: rgba(24, 43, 90, 1);
+  width: 480px;
+  height: 295px;
+  position: relative;
+  overflow: hidden;
+}
+.Contacts svg{
+position: absolute;
+display: block;
+width: 1918px;
+height: 273px; 
+fill:none; 
+}
+.ContactText{
+    display: flex; 
+    flex-direction: column;
+    width: 440px;
+    height: 154px; 
+    margin-top: 60px; margin-bottom: 59px; 
+    position: absolute;
+    margin-top: 43px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.ContactText p{
+  text-align: center;
+  line-height: 30px;
+  color: #FEFEFE;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 440px;
+}
+#ContactInformation{
+line-height: 30px;
+width: 440px;
+left: 0%;
+}
   }
