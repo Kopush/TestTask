@@ -144,7 +144,7 @@ li > a:hover:before {
   font-weight: 700;
   line-height: normal;
   margin-top: 256px;
-  width: 859px;
+  width: 830px;
   height: 120px;
 }
 /**Оболочка ссылки**/
@@ -291,6 +291,7 @@ input[name="r"] {
 }
 /**Стиль текста для блока коммерческой недвижимости**/
 .CommercialText{
+  display: none;
   font-style: normal;
   color: #FEFEFE; font-family: Noto Sans;
   transform: skewX(15deg);
@@ -300,7 +301,13 @@ input[name="r"] {
   height: 33px;
 }
 .CommercialText2{
-  display: none;
+  font-style: normal;
+  color: #FEFEFE; font-family: Noto Sans;
+  transform: skewX(15deg);
+  margin-left: 45%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  height: 33px;
 }
 /**Оболочка блока с жилой недвижимостью**/
 .Residential{
@@ -604,6 +611,7 @@ input[name="r"] {
 }
 
 .TPtext{
+  display: block;
   margin-top: 35px;
   width: 804px;
   height: 251px;
@@ -614,7 +622,9 @@ input[name="r"] {
   font-weight: 400;
   line-height: 30px;
 }
-
+.TPtext__1024px{
+  display: none;
+}
 
 /**
    * ФОРМА СВЯЗИ С КЛИЕНТОМ
@@ -685,6 +695,7 @@ padding-left: 20px;
   height: 19px; 
   width: 361px;
   margin-top: -40px;
+  
 }
 
 .SupportiveDiv p{
@@ -788,6 +799,7 @@ padding-left: 20px;
   display: grid; grid-template-columns: 63% 37%;
 }
 .Icons{
+  color: #182B5A;
   margin-left: 200px;
   display: flex; flex-direction: column;
 }
@@ -818,9 +830,20 @@ padding-left: 20px;
   display: flex; flex-direction: column;
 }
 #phadress{
+  color: #182B5A;
   margin-top: 3px;
 }
+#phnumber{
+  color: #182B5A;
+}
+#phmail{
+  color: #182B5A;
+}
+#phclock{
+  color: #182B5A;
+}
 .Requisites{
+  color: #182B5A;
   display: flex; flex-direction: column;
 }
 .Requisites p{

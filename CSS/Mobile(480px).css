@@ -3,7 +3,7 @@
       width: 100%; 
       max-width: 480px;
       margin: 0px; 
-      overflow-x: hidden;
+      overflow: hidden;
   }
   .header__container {
     display: flex;
@@ -23,7 +23,7 @@
         display: grid;
         grid-template-columns: 5% 90%;
         margin-left: 20px;
-        margin-top: 11,5px;
+        margin-top: 12px;
         }
         .LogoImg{
           height: 27px;
@@ -46,8 +46,7 @@
           width: 100px;
           margin-top: 50px;
           display: block;
-   
-          
+          z-index: 1;
           
           height: 300px;
 
@@ -56,13 +55,14 @@
           will-change: transform;
         }
         .Menu.open .MobileMenu{
+          display: block;
           position: absolute;
           margin-top: 50px;
           transform: translateX(-100%);
           visibility: visible;
+          z-index: 1;
       }
         .MenuItems{
-          position: absolute;
           display: block;
           right: -100px;
           width: 100px;
@@ -83,6 +83,7 @@
           }
           .MenuItems a{
             color: #f1f1f1;
+            font-size: 12px;
           }
 
           li > a {
@@ -101,7 +102,7 @@
           font-weight: 400; 
           font-size: 14px; 
           margin-left: 21,4px;
-          margin-top: 5px;
+          margin-top: 10px;
         }
   
       .ViewBoard{
@@ -125,7 +126,7 @@
   height: 50px;
 }
 .InfoPreview{
-  margin-top: -20px;
+  margin-top: 0px;
   margin-bottom: auto;
 }
 .InfoPreview p{
@@ -135,8 +136,11 @@
 /**Оболочка ссылки**/
 .ServicesButton{
   border: 3px solid black; 
-  width: 230px;
+  height: 40px;
+  width: 170px;
   padding: 10px;
+  margin-left: 27px;
+  margin-top: 20px;
   padding-left: 0px;
   position: relative;
 }
@@ -144,10 +148,10 @@
 .ServLink{
   text-decoration: none;
   color: rgba(24, 43, 90, 1);  
-  font-family: Leto Sans; font-size: 16px; text-align: center;
-  margin-top: 10px;
-  margin-bottom: -30px;
-  margin-left: 30px;
+  font-family: Leto Sans; font-size: 14px; text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 12px;
 }
 
 .slider{
@@ -257,7 +261,7 @@ input[name="r"] {
 .CommercialBanner{
   transform: none;
   margin-left: -40px;
-  margin-top: 60px;
+  margin-top: 21px;
   width: 335px;
   height: 200px;
   object-fit: contain;
@@ -266,10 +270,21 @@ input[name="r"] {
 
 /**Стиль текста для блока коммерческой недвижимости**/
 .CommercialText{
-  display: none;
+  display: block;
+  width: 105px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  position: relative;
+  font-style: normal;
+  color: #FEFEFE; font-family: Noto Sans;
+  transform: none;
+  margin-top: 11px;
+  margin-bottom: 0%;
+  margin-left: 64px;
 }
 .CommercialText2{
-  display: block;
+  display: none;
   text-align: center;
   font-size: 14px;
   font-weight: 400;
@@ -289,14 +304,17 @@ input[name="r"] {
 }
 /**Блок с жилой недвижимостью**/
 .ResidentialBanner{
+  margin-top: -5px;
   margin-bottom: 0px;
   transform: none;
-  margin-left: 0%;
-  width: 240px;
+  margin-left: -100px;
+  width: 340px;
   height: 200px;
   object-fit: cover;
 }
 .ResidentialText2{
+  display: block;
+  width: 103px;
   text-align: center;
   font-size: 14px;
   font-weight: 400;
@@ -304,9 +322,9 @@ input[name="r"] {
   font-style: normal;
   color: #FEFEFE; font-family: Noto Sans;
   transform: none;
-  margin-top: 0%;
+  margin-top: 5px;
   margin-bottom: 0%;
-  margin-left: 0%;
+  margin-left: 66px;
 }
 /**Стиль текста для блока с жилой недвижимостью**/
 .ResidentialText{
@@ -314,49 +332,49 @@ input[name="r"] {
 }
 /**Оболочка блока с overlay текстовой информацией**/
 .OverlayText{
-  visibility: collapse;
+  display: none;
 }
 /**Стиль для кнопки "ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ"(жилая недвижимость)**/
 .CommercialInfo{
-  visibility: collapse;
+  display: none;
 }
 /**Блок-подложка overlay(коммерческая недвижимость)**/
 .overlay{
-  visibility: collapse;
+  display: none;
 }
 /**Блок-image overlay(коммерческая недвижимость)**/
 .overlay1{
-  visibility: collapse;
+  display: none;
 }
 /**Оболочка блока с overlay текстовой информацией**/
 .OverlayText2{
-  visibility: collapse;
+  display: none;
 }
 
 .ResidencialTextOverlay{
-  visibility: collapse;
+  display: none;
 }
 
 .CommercialInfo2{
-  visibility: collapse;
+  display: none;
 }
 /**Блок-подложка overlay(жилая недвижимость)**/
 .overlay2{
-  visibility: collapse;
+  display: none;
 }
 /**Блок-image overlay(жилая недвижимость)**/
 .overlay3{
-  visibility: collapse;
+  display: none;
 }
 
 .Residential:hover .overlay2{
-  visibility: collapse;
+  display: none;
 }
 .Residential:hover .overlay3{
-  visibility: collapse;
+  display: none;
 }
 .Residential:hover .OverlayText2{
-  visibility: collapse;
+  display: none;
 }
 
 
@@ -366,9 +384,10 @@ input[name="r"] {
 .AboutUs{
   display: block;
   width: 480px;
-  height: 434px;
+  height: 455px;
 }
 .TextPart{
+  margin-top: 0%;
   margin-left: 20px;
   margin-right: 25px;
   width: 440px;
@@ -389,7 +408,7 @@ input[name="r"] {
 .TPtext{
   width: 430px;
   height: auto;
-
+  display: block;
   margin-right: 20px;
 
   margin-top: 21px;
@@ -398,8 +417,11 @@ input[name="r"] {
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  line-height: 20px;
   text-align: center;
+}
+.TPtext__1024px{
+  display: none;
 }
 .TPtext p{
   width: 440px;
@@ -517,17 +539,20 @@ padding-left: 20px;
 }
 
 .SupportiveDiv{
+  position: relative;
   display: inline-block; 
   height: 19px; 
   width: 361px;
-  margin-top: -47px;
+  margin-top: -60px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .SupportiveDiv p{
   display: inline-block;
   float:left;
   font-size: 14px;
-  margin-top: 5px;
+  margin-top: 7px;
   position: absolute;
   margin-left: 5px;
 }
@@ -536,9 +561,9 @@ padding-left: 20px;
   display: inline-block;
   float:left;
   font-size: 14px;
-  margin-top: 5px;
+  margin-top: 7px;
   position: absolute;
-  margin-left: 116px;
+  margin-left: 105px;
   text-decoration-line: underline;
 }
 
@@ -557,7 +582,7 @@ padding-left: 20px;
   background: none;
   border: 3px solid #FEFEFE;
   width: 170px; height: 50px;
-  margin-top: -60px;
+  margin-top: 0px;
   margin-right: auto; margin-left: auto;
 }
 
@@ -584,15 +609,14 @@ display: none;
 .Map2{
   position: relative;
   display: block;
-  width: 480; height: 298px;
+  width: 480px; height: 298px;
 }
 .Map2 img{
-  object-fit: contain;
-  width: 480; height: 298px;
-  background-position: center;
+  object-fit: fill;
+  width: 580px; height: 298px;
 }
 .AdressShell{
-display: grid; grid-template-rows: 20% 80%;
+display: grid; grid-template-rows: 15% 85%;
 width: 480px;
 height: 491px;
 margin-left: auto; 
@@ -603,6 +627,9 @@ margin-right: auto;
 margin-left: auto; 
 margin-right: auto;
 font-size: 18px;
+}
+.DetailButtonShell{
+  margin-top: 20px;
 }
 .SupportiveShell{
 display: grid; grid-template-rows: 12,5% 12,5% 12,5% 12,5% 12,5% 12,5% 12,5% 12,5%;
@@ -617,6 +644,7 @@ width: 377px;
   margin-right: auto;
 }
 .Line{
+  display: block;
   visibility: visible;
   margin-top: 50px;
   margin-bottom: 0px;
@@ -625,6 +653,9 @@ width: 377px;
 #line{
   width: 440px; height: 2px;
   margin-top: 39px;
+}
+#linehide{
+  display: block;
 }
 .Icons{
   margin-left: -15px; 
@@ -661,7 +692,7 @@ font-size: 14px;
 margin-top: 3px;
 }
 .Requisites{
-  margin-left: 50px;  
+  margin-left: 35px;  
   margin-right: auto;
 display: flex; flex-direction: column;
 }
@@ -696,8 +727,8 @@ margin-top: 0%;
 .Contacts svg{
 position: absolute;
 display: block;
-width: 1918px;
-height: 273px; 
+width: 2932px;
+height: 573px; 
 fill:none; 
 }
 .ContactText{

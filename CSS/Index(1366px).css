@@ -1,0 +1,900 @@
+@media (max-width: 1366px) 
+{
+    *{
+        margin: 0px;
+        list-style-type: none;
+        box-sizing: border-box;
+      }
+      ::-webkit-scrollbar {
+        display: none;
+    }
+    
+      .Container{
+        width: 100%;
+        max-width: 1366px; 
+        margin: 0px; 
+        overflow-x: hidden;
+      }
+
+     /**
+   * ШАПКА : МЕНЮ И ЛОГОТИП КОМПАНИИ
+   **/
+
+
+.Menu{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 1366px;
+    height: 86px;
+    flex-shrink: 0;
+    color: rgba(24, 43, 90, 1);
+    }
+    .LogoImg{
+        width: 36px;
+        height: 42px;
+    }
+    .Logotype{
+    display: grid;
+    grid-template-columns: 5% 90%;
+    margin-left: 98px; margin-top: 22px;
+    }
+    
+    .CompanyNameless{
+      font-family: Leto Sans; 
+      font-weight: 400; 
+      font-size: 17px; 
+      margin-top: 20px;
+      margin-left: 15px;
+    }
+    .MenuButton{
+      display: none;
+    }
+    
+    .MenuItems{
+    margin-right: 107px;
+    width: 614px;
+    height: 86px;
+    flex-shrink: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    }
+    
+    .MenuItems a{
+    text-decoration: none;
+    display: inline-block;
+    line-height: 4px; 
+    color: black;
+    font-size: 16;
+    font-family: Roboto;
+    font-weight: 700;
+    word-wrap: break-word;
+    }
+    
+    
+    li > a {
+      position: relative;
+      color: black;
+      padding-top: 45px;
+      padding-bottom: 35px;
+    }
+    
+    li > a:hover {
+      color: black;
+    }
+    
+    li > a:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      bottom: 0;
+      left: 0;
+      right: 0%;
+      background-color: black;
+      visibility: hidden;
+      transform: scaleX(0);
+      transition-property: left right;
+      transition-duration: 0.5s;
+    }
+    
+    li > a:hover:before {
+      visibility: visible;
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+      text-decoration: none;
+    }
+    
+    /**
+   * БАННЕР-СЛАЙДЕР
+**/
+
+/**Оболочка блока**/
+.ViewBoard{
+    color: rgba(24, 43, 90, 1); 
+  
+    width: 1366px; 
+    height: 780px;
+    overflow: hidden;
+    position: relative;
+  }
+  .InfoPreview{
+    margin-left: 98px;
+  }
+  
+  /**Стиль текста для фреймов слайдера**/
+  .BannerText{
+    color: #182B5A;
+    font-family: Noto Sans;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 297px;
+    width: 750px;
+    height: 110px;
+  }
+  /**Оболочка ссылки**/
+  .ServicesButton{
+    border: 3px solid black; width: 250px;
+    padding: 15px;
+    padding-left: 0px;
+    height: 55px;margin-top: 20px;
+  }
+  /**Стиль ссылки для фреймов слайдера**/
+  .ServLink{
+    text-decoration: none;
+    color: rgba(24, 43, 90, 1);  
+    font-family: Leto Sans; font-size: 16px; text-align: center;
+    margin-top: 60px;
+    margin-bottom: -30px;
+    margin-left: 40px;
+  }
+  
+  .slider{
+    width: 100%;
+    max-width: 1366px; 
+    height: 780px; 
+    overflow: hidden;
+  }
+  .middle{
+    position: absolute;
+  }
+  .navigation{
+    position: absolute;
+    bottom: 16px;
+    left: 10%;
+    bottom: 50px;
+    transform: translateX(-50%);
+    display: flex;
+  }
+  .bar{
+    height: 4px;
+    width: 35px;
+    margin: 6px;
+    cursor: pointer;
+    background-color: #000;
+    opacity: .7;
+    transition: all .4s ease;
+  }
+  .bar:hover{
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+  input[name="r"] {
+    position: absolute;
+    visibility: hidden;
+  }
+  .slides{
+    width: 400%;
+    height: 100%;
+    display: flex;
+  }
+  .slide{  
+    width: 100%;
+    max-width: 1366px;
+    transition: all .6s ease;
+    object-fit: cover;
+  }
+  .slide p{
+    font-family: Roboto; 
+  }
+  
+  #r1:checked ~.s1{
+    margin-left: 0;
+  }
+  #r2:checked ~.s1{
+    margin-left: -25%;
+  }
+  #r3:checked ~.s1{
+    margin-left: -50%;
+  }
+  #r4:checked ~.s1{
+    margin-left: -75%;
+  }
+  
+  #img1{
+    background-image: url(Images/Pr1.jpg);
+    object-fit: scale-down;
+  }
+  #img2{
+    background-image: url(Images/Pr5.jpg);
+  }
+  #img3{
+    background-image: url(Images/Pr9.jpg);
+  }
+  #img4{
+    background-image: url(Images/Pr7.jpg);
+  }
+  
+  /**
+   * ИНТЕРАКТИВНЫЙ БАННЕР "ВИДЫ НЕДВИЖИМОСТИ"
+**/
+
+/**Оболочка блока**/
+.PropertyType{
+    background-color: rgba(24, 43, 90, 1);
+    width: 1366px; height: 739px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 0%;
+    overflow: hidden;
+  }
+  /**Оболочка блока с коммерческой недвижимостью**/
+  .Commercial{
+    position: relative;
+    width: 783px;height: 739px;
+    margin-left: -100px;
+    transform: skewX(-10deg);
+    background-image: url(Images/WavesVector.png);
+    overflow: hidden;
+    background-size: cover;
+    box-shadow: 0 1rem 5rem rgba(24, 43, 90, 1);
+  }
+  /**Блок коммерческой недвижимости**/
+  .CommercialBanner{
+    height: 639px; width: 1000px;
+    transform: skewY(10deg) rotate(-10deg);
+    margin-left: -50px;
+    background-size: contain;
+    margin-top: -50px;
+  }/**Стиль текста для overlay блока с жилой недвижимостью**/
+  .CommercialTextOverlay{
+    font-style: normal;
+    color: #FEFEFE; font-family: Noto Sans;
+    transform: skewX(10deg);
+    margin-left: 35%;
+    margin-top: 35%;
+    height: 33px;
+  
+    font-size: 35px;
+    font-weight: 500;
+    line-height: normal;
+  }
+  /**Стиль текста для блока коммерческой недвижимости**/
+  .CommercialText{
+    font-style: normal;
+    color: #FEFEFE; font-family: Noto Sans;
+    transform: skewX(10deg);
+    margin-left: 267px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: 33px;
+    display: none;
+  }
+  .CommercialText2{
+    font-style: normal;
+    color: #FEFEFE; font-family: Noto Sans;
+    transform: skewX(10deg);
+    margin-left: 267px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: 33px;
+  }
+  /**Оболочка блока с жилой недвижимостью**/
+  .Residential{
+    position: relative;
+    margin-left: 8px;
+    transform: skewX(-10deg);
+    background-image: url(Images/WavesVector.png);
+    width: 783px; height: 739px;
+    overflow: hidden;
+    background-size: cover;
+  }
+  /**Блок с жилой недвижимостью**/
+  .ResidentialBanner{
+    position: relative;
+    transform: skewX(10deg);
+    width: 939px; height: 639px;
+    object-fit: fill;
+    margin-left: -100px;
+  }
+  /**Стиль текста для блока с жилой недвижимостью**/
+  .ResidentialText{
+    position: relative;
+    font-style: normal;
+    color: #FEFEFE; font-family: Noto Sans;
+    transform: skewX(10deg);
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 25%;
+  }
+  .ResidentialText2{
+    display: none;
+  }
+  /**Оболочка блока с overlay текстовой информацией**/
+  .OverlayText{
+    position: absolute;
+    width: 0;
+    height: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    font-family: Noto Sans;
+  }
+  /**Стиль для кнопки "ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ"(коммерческая недвижимость)**/
+  .CommercialInfo{
+    width: 320px;
+    height: 55px;
+    border: 3px solid #FEFEFE;
+    background: none;
+    transform: skewX(10deg);
+    color: #FEFEFE;
+  
+    font-family: Noto Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 34%;
+    margin-top: 10%;
+  }
+  /**Блок-подложка overlay(коммерческая недвижимость)**/
+  .overlay{
+    position: absolute;
+    width: 0;
+    height: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    background-color: rgba(24, 43, 90, 1);
+    margin-left: 0;
+  }
+  /**Блок-image overlay(коммерческая недвижимость)**/
+  .overlay1{
+    position: absolute;
+    width: 0;
+    height: 100%;
+    left: 70px;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    background-image: url(Images/Home1.jpg);
+    transform: skewX(10deg);
+    background-size: cover;
+    opacity: 10%;
+    margin-left:0;
+  }
+  
+  .Commercial:hover .overlay{
+    width: 100%;
+  }
+  .Commercial:hover .overlay1{
+    width: 100%;
+  }
+  .Commercial:hover .OverlayText{
+    width: 100%;
+  }
+  
+  /**Оболочка блока с overlay текстовой информацией**/
+  .OverlayText2{
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 100%;
+    left: 100%;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    font-family: Noto Sans;
+  }
+  
+  .ResidencialTextOverlay{
+    font-style: normal;
+    color: #FEFEFE; font-family: Noto Sans;
+    transform: skewX(10deg);
+    margin-left: 25%;
+    margin-top: 35%;
+    height: 33px;
+  
+    font-size: 35px;
+    font-weight: 500;
+    line-height: normal;
+  }
+  
+  .CommercialInfo2{
+    width: 320px;
+    height: 55px;
+    border: 3px solid #FEFEFE;
+    background: none;
+    transform: skewX(10deg);
+    color: #FEFEFE;
+  
+    font-family: Noto Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 30%;
+    margin-top: 5%;
+  }
+  /**Блок-подложка overlay(жилая недвижимость)**/
+  .overlay2{
+    position: absolute;
+    width: 0px;
+    height: 100%;
+    left: 100%;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    background-color: rgba(24, 43, 90, 1);
+    margin-left:0%;
+  }
+  /**Блок-image overlay(жилая недвижимость)**/
+  .overlay3{
+    position: absolute;
+    width: 0px;
+    height: 100%;
+    left: 100%;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    background-image: url(Images/Home2.jpg);
+    transform: skewX(10deg);
+    background-size: cover;
+    opacity: 10%;
+    margin-left:-10%;
+  }
+  
+  .Residential:hover .overlay2{
+    width: 100%;
+    left: 0;
+  }
+  .Residential:hover .overlay3{
+    width: 100%;
+    left: 0;
+  }
+  .Residential:hover .OverlayText2{
+    width: 100%;
+    left: 0;
+  }
+  
+  
+  
+  
+  
+  .DetailButtonShell{
+    height: 50px;   
+    margin-top: 45px; 
+  }
+  
+  .DetailButton{
+    width: 185px; height: 50px; 
+  
+    color: rgba(24, 43, 90, 1); 
+    padding: 10px; 
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;  
+    border: 3px solid rgba(24, 43, 90, 1); 
+    text-decoration: none;
+    font-family: Noto Sans;
+  }
+  
+  
+  /**
+     * БАННЕР "О НАС"
+  **/
+  .AboutUs{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1366px; 
+    height: 750px; 
+    background-color: white;
+  }
+  
+  .TheBannerShell{
+    width: 1366px; height: 760px; 
+    display: inline-block; 
+    position: absolute;
+  }
+  
+  .BannerBackground{
+    width: 100%; height: 100%;
+    position: relative;
+    filter: hue-rotate(365deg);
+    filter: brightness(0,2);
+    filter: drop-shadow(3);
+    transform: scaleX(-1);
+    object-fit: cover;
+  }
+  
+  .RentServices{
+    position: absolute;
+    display: inline-block; 
+    margin-top: 300px; margin-left: 120px;
+  }
+  
+  
+  
+  .Nameless{
+    font-family: Leto Sans;
+  }
+  
+  
+  .ImagesPart{
+    width: auto;
+    height: auto;
+    margin-left: 12%; 
+    margin-right: auto; 
+    margin-top: 107px; 
+    float: left;
+    margin-right: 20%;
+  }
+  
+  .WavesBackShell{
+    width: 553px;
+    height: 435px; 
+    background-color: rgba(24, 43, 90, 1); 
+    position: absolute;
+  }
+  
+  .BackWaves{
+    width: 553px; height: 435px;
+  }
+  
+  .FlatsFrontShell{
+    position: absolute; margin: 20px;
+  }
+  
+  .FrontFlats{
+    width: 553px; height: 435px;
+    object-fit: cover;
+  }
+  
+  .TextPart{
+    margin-left: 6px; 
+    margin-top: 104px; 
+    margin-bottom: auto; 
+    margin-right: auto; 
+    float: right; width: 572px;
+    height: 468px;
+  }
+  
+  .TPh2{
+    color: #182B5A;
+    font-family: Muller;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  
+  .TPtext{
+    display: block;
+    margin-top: 25px;
+    width: 572px;
+    height: 338px;
+    font-family: Roboto;
+    color: #182B5A;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px;
+  }
+
+  .TPtext__1024px{
+    display: none;
+  }
+  .Interval{
+    height: 34px;
+  }
+  .DetailButtonShell{
+    margin-top: 44px;
+  }
+
+  /**
+   * ФОРМА СВЯЗИ С КЛИЕНТОМ
+**/
+
+.Communication{
+  display: grid; 
+  grid-template-rows: 30% 50% 20%; 
+  position: relative;
+  overflow: hidden;
+  width: 1366px;
+  height: 498px;
+  background-color: rgba(24, 43, 90, 1);
+}
+
+.CRMh2{
+  color: #FEFEFE;
+  margin-top: 100px;
+  margin-bottom: 43px;
+  text-align: center;
+  font-family: Noto Sans;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.CRMform{
+  display: grid; grid-template-rows: 30% 50% 20%;
+  margin-right: auto; margin-left: auto;
+  margin-top: 43px;
+  width: 415px;
+  height: 254px;
+}
+
+.CommunicationTextDecorations1{
+font-family: Roboto;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+width: 415px; height: 55px;
+margin-top: 25;
+padding-left: 20px;
+}
+
+.CommunicationTextDecorations1::placeholder{
+  color: #182B5A;
+}
+.CommunicationTextDecorations2::placeholder{
+  color: #182B5A;
+}
+
+.CommunicationTextDecorations2{
+color: #182B5A;
+font-family: Roboto;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+width: 415px; height: 55px;
+margin-bottom: -40px;
+padding-left: 20px;
+}
+
+.SupportiveDiv{
+  display: inline-block; 
+  height: 19px; 
+  width: 399px;
+  margin-top: -50px;
+  position: relative;
+}
+
+.SupportiveDiv p{
+  display: inline-block;
+  float:left;
+  margin-top: 5px;
+  position: absolute;
+  margin-left: 5px;
+}
+
+.SupportiveDiv a{
+  display: inline-block;
+  float:left;
+  margin-top: -24px;
+  position: relative;
+  margin-left: 149px;
+  text-decoration-line: underline;
+}
+
+.CheckboxPolicy{
+  margin-left: 9px;
+  margin-top: 5px;
+  width: 20px; 
+  height: 20px;
+}
+
+.SendButton{
+  color: #FEFEFE;
+  font-family: Noto Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background: none;
+  border: 3px solid #FEFEFE;
+  width: 170px; height: 50px;
+  margin-right: auto; margin-left: auto;
+}
+
+.DecorativeElement1{
+  width: 515px; 
+  height: 286px; 
+  margin-top: 212px;
+  margin-left: 8px; 
+  position: absolute;
+}
+
+.DecorativeElement2{
+  width: 383px; 
+  height: 324px; 
+  margin-top: 191px;
+  margin-right: 33px; 
+  margin-left: 70%; 
+  position: absolute;
+}
+
+/**
+   * АДРЕС
+**/
+.Adress{
+  width: 1366px;
+  height: 498px;
+  background-color: #FEFEFE;
+  display: grid;
+  grid-template-columns: 45% 55%;
+}
+.Map{
+  width: 682px;
+  height: 498px;
+  object-fit: cover;
+}
+.Map2{
+width: 0%;
+height: 0%;
+display: none;
+}
+.AdressShell{
+display: grid; grid-template-rows: 20% 80%;
+}
+.AdressShell h2{
+margin-left: 175px; 
+margin-right: auto;
+margin-top: 59px;
+font-size: 24px;
+height: 33px;
+}
+.SupportiveShell{
+  display: grid; grid-template-rows: 12,5% 12,5% 12,5% 12,5% 12,5% 12,5% 12,5% 12,5%;
+  grid-template-columns: none;
+  margin-left: 85px; 
+  margin-top: 21px;
+  margin-right: auto;
+  width: 377px;
+}
+.Icons{
+margin-left: 90px;
+display: flex; flex-direction: column;
+}
+.Wrapper{
+  display: flex;
+  margin-left: 0; 
+  margin-right: auto;
+}
+.Line{
+visibility: collapse;
+}
+#line{
+width: 440px; height: 2px;
+}
+#linehide{
+  display: none;
+}
+.Icons img{
+width: 25px;
+height: 25px;
+background-size: contain;
+margin-top: 15px;
+display: flex; flex-direction: column;
+}
+#pin{
+margin-top: 0%;
+}
+.Icons p{
+color: rgba(0, 0, 0, 1);
+margin-top: 22px;
+margin-left: 15px;
+width: auto;
+display: flex; flex-direction: column;
+}
+#phadress{
+margin-top: 3px;
+}
+.Requisites{
+  position: absolute;
+  margin-top: 191px;
+  display: flex; flex-direction: column;
+  margin-left: 80px;
+}
+.Requisites p{
+color: rgba(24, 43, 90, 1); margin-top: 24px;
+margin-left: 15px;
+}
+#INN{
+margin-top: 0%;
+}
+.RequisitesInfo{
+display: flex; flex-direction: column;
+}
+.RequisitesInfo p{
+color: rgba(0, 0, 0, 1);margin-top: 24px;
+}
+#inn{
+margin-top: 0%;
+}
+
+/**
+   * КОНТАКТЫ
+**/
+.Contacts{
+  display: block;
+  background-color: rgba(24, 43, 90, 1);
+  width: 1366px;
+  height: 273px;
+  position: relative;
+  overflow: hidden;
+}
+.Contacts svg{
+position: absolute;
+display: block;
+width: 1918px;
+height: 273px; 
+fill:none; 
+}
+.ContactText{
+    display: flex; 
+    flex-direction: column;
+    width: 804px;
+    height: 154px; 
+    margin-left: 100px;
+    margin-top: 60px; margin-bottom: 59px; 
+    position: absolute;
+}
+.ContactText p{
+  line-height: 30px;
+  color: #FEFEFE;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+#ContactInformation{
+line-height: 30px;
+}
+
+
+.RobotoFont{
+    color: #FEFEFE;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.NotoSansFont{
+    color: #182B5A;
+    font-family: Noto Sans;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+}

@@ -2,6 +2,8 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="CSS/Styles.css">
+    <link rel="stylesheet" href="CSS/Index(1366px).css">
+    <link rel="stylesheet" href="CSS/Tablet(1024px).css">
     <link rel="stylesheet" href="CSS/Mobile(480px).css">
     <link rel="stylesheet" href="Event Handler.js">
     
@@ -22,7 +24,7 @@
 
 <container class="Container">
 <body>
-      <header class="Menu open">
+      <header class="Menu">
         <div class="Logotype">
             <img class="LogoImg" src="CSS/Images/Logo 2.png">
             <h1 class="CompanyNameless">Salesprodazha.ru</h1>
@@ -30,8 +32,8 @@
 
 
         <div class="container header__container">
-          
-          <button class="MenuButton" id="menu_btn" onclick="click()"></button>
+
+          <button class="MenuButton" id="menu_btn"></button>
 
                   <nav class="MobileMenu" id="mob">
                     <ul class="MenuItems">
@@ -137,16 +139,19 @@
     <div class="PropertyType"><!-- Интерактивный баннер "Виды недвижимости" --> 
       <!-- Коммерческая недвижимость" --> 
       <div class="Commercial">
+        <h2 class="CommercialText">Коммерческая недвижимость</h2>
+       
        <img class="CommercialBanner" src="https://s3-alpha-sig.figma.com/img/fd1a/5e61/ec1a0e22f16ec8ce7d168bd648b3a60c?Expires=1702857600&Signature=Y872~xWmYKupbQbD4PvZT-SD9rDKsvSFOECAI8kFcStNq8hEh~NwSZD1iTOFYv05DlDuLXndH8tu~rPduqCcXpMUVoPED4TeuyaMLdrd1PNq1Sa9KpkxCbfl0FCKhtv3OM9WIcp0zgWekIFnCstRCevwrluKOzPjDI12tP8k-NI4l1mPAnYKsSDNeiD06zXwATydQwB8zNH9cnGzzYMtapG6jRmE-lztf8qfF~mwRWBRXLuxXRmt-dUvrZnEcXj4jSbgEHAGr5wbyS9bA2AwDPgkkkXWjb2E-FZBpJyr0Uy03aSIGDnzNK4GMq0QV6Soih51PRzmGNynSff8y5VMhw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
 
-            <h2 class="CommercialText">Коммерческая недвижимость</h2>
+             <h2 class="CommercialText2">Коммерческая недвижимость</h2>
             <div class="overlay"></div>
             <div class="overlay1"></div>
+            
             <div class="OverlayText">
                 <h2 class="CommercialTextOverlay">Коммерческая недвижимость</h2>
                 <button type="button" class="CommercialInfo">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</button>
               </div>
-              <h2 class="CommercialText2">Коммерческая недвижимость</h2>
+              
       </div>
 
       <!-- Жилая недвижимость" --> 
@@ -156,13 +161,14 @@
             
        <img class="ResidentialBanner" 
        src="CSS/Images/Home2.jpg">
-          <div class="overlay2"></div>
+          <div class="overlay2"></div> 
+          <h2 class="ResidentialText2">Жилая недвижимость</h2>
                       <div class="overlay3"></div>
                       <div class="OverlayText2">
                         <h2 class="ResidencialTextOverlay">Жилая недвижимость</h2>
                         <button type="button" class="CommercialInfo2">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</button>
                       </div>
-                  <h2 class="ResidentialText2">Жилая недвижимость</h2>
+                 
       </div>
     </div>
 
@@ -181,6 +187,19 @@
 
       <div class="TextPart">
         <h2 class="TPh2">О нас</h2>
+        <p class="TPtext__1024px">
+          Lorem ipsum – псевдо-латинский текст, который используется для веб дизайна,
+          типографии,  оборудования, и распечатки вместо английского текста для того,
+          чтобы сделать ударение не на содержание, а на элементы дизайна. Такой текст
+          также называется как заполнитель. Это очень удобный инструмент для моделей
+          (макетов). Он помогает выделить визуальные элементы в
+          <br>документе или презентации, например текст, шрифт или разметка. Lorem ipsum
+          <br>по большей части является элементом латинского текста классического автора и
+          <br>философа Цицерона. Слова и буквы были заменены добавлением или
+          <br>сокращением элементов, поэтому будет совсем неразумно пытаться
+          <br>передать содержание; это не гениально, не правильно, используется даже не
+          <br>понятный латинский.
+        </p>
         <p class="TPtext">Lorem ipsum – псевдо-латинский текст, который используется для веб дизайна, типографии,
         оборудования, и распечатки вместо английского текста для того, чтобы сделать ударение не на
         содержание, а на элементы дизайна. Такой текст также называется как заполнитель.
@@ -190,6 +209,7 @@
         является элементом латинского текста классического автора и философа Цицерона. Слова и буквы
         были заменены добавлением или сокращением элементов, поэтому будет совсем неразумно пытаться
         передать содержание; это не гениально, не правильно, используется даже не понятный латинский.</p>
+        
           <div class="DetailButtonShell">
             <a class="DetailButton" href="">ПОДРОБНЕЕ</a>
           </div>
@@ -249,7 +269,7 @@
             <p class="RobotoFont" id="phclock">Пн-Пт: 9:00 - 18:00</p>
           </div>
             
-          <div class="Wrapper">
+          <div class="Wrapper" id="linehide">
             <img src="CSS/Images/Vector 2.png" id="line" class="Line">
           </div>
           </div>
